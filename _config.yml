@@ -1,6 +1,4 @@
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: pages-themes/slate@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-logo: /pyb.png
-description: 潘玉彪：博士，副教授；2010年在中国科学技术大学计算机科学与技术学院获得计算机科学与技术工学学士学位，同年硕博连读中科大计算机学院并于2015年获得计算机软件与理论专业博士学位；2015年7月至2016年11月就职于华为技术有限公司2012实验室，任算法工程师；2016年12月调入华侨大学计算机科学与技术学院工作从事科研教学工作。入选福建省高层次人才，厦门市高层次人才，泉州高层次人才。2019年7月遴选为硕士生导师。
 title: Welcome to Yubiao's homepage!
