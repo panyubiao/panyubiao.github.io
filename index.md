@@ -7,7 +7,7 @@
       <p><b>研究方向：计算机存储系统（包括云存储，分布式存储，键值存储等）</b></p >
     </td>
     <td width="25%">
-      < img src="/pyb.jpg" width="100%">
+      < img src="/pyb.png" width="100%">
     </td>
   </tr>
 </table>
