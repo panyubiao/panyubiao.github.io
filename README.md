@@ -18,7 +18,7 @@
 软件工程（学硕）、电子信息（专硕）
 
 ## 指导学生
-### 研究生
+### 1）研究生
 2024级：李昇，陈钰
 
 2023级：黄伟斌，田爱玲
@@ -29,7 +29,7 @@
 
 2020级：赵佳宁（入职中国农业银行）
 
-### 部分优秀本科生
+### 2）部分优秀本科生
 2020级：胡潘榕（考取华中师范大学）
 
 2019级：孙舒欣（保送山东大学），李孜睿（入职四川中烟工业有限责任公司）
@@ -41,7 +41,7 @@
 2016级：刘冠舜（考取中科大），张佳鑫（考取中科大），王子悦（赴美国东北大学攻读研究生），高晗哲（赴悉尼大学攻读研究生），陈强（考取华东师范大学）
 
 ## 科研信息
-### 学术论文
+### 1）学术论文
 [22] Xinwei Lin, **Yubiao Pan***, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
 
 [21] **Yubiao Pan***, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
@@ -86,7 +86,7 @@
 
 [01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，**Yubiao Pan**，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. **(CCF A类期刊)**
 
-### 科研项目
+### 2）科研项目
 [04] 大容量固态硬盘闪存转换层性能优化研究， 福建省自然科学基金面上项目（No.2021J01319），主持，结题，2021.11-2024.11 
 
 [03] 大容量固态硬盘地址映射表优化设计与访存优化研究，国家自然科学基金青年项目（No.61802133），主持，结题，2019.01-2021.12
@@ -95,7 +95,7 @@
 
 [01] 纠删码算法在闪存存储系统中的应用与优化研究 ，华侨大学人才引进科研启动项目（No.16BS807），主持，2017.05-2019.04
 
-### 发明专利
+### 3）发明专利
 [21] 应用于WiscKey的协同无效键值对确认方法及垃圾回收方法；**潘玉彪**, 许杰, 张惠臻. 授权.
 
 [20] 应用于键值分离存储系统的页缓存热数据聚合方法及装置；**潘玉彪**, 许杰, 张惠臻. 授权.
@@ -139,17 +139,17 @@
 [01] 一种低开销且无差错的冷热数据识别方法；许胤龙，沈标标，李永坤、**潘玉彪**、王能. 授权.
 
 ## 教学信息
-### 课程教学
+### 1）课程教学
 [03] 《计算机组成原理》
 
 [02] 《计算机导论》
 
 [01] 《互联网+：引论》
 
-### 教改论文
+### 2）教改论文
 [01] 潘玉彪，王靖，张惠臻，张絮晖，雷庆，“境外生电子信息专业硕士的培养模式改革”，福建电脑，38(07)，53-55，2022
 
-### 教学获奖
+### 3）教学获奖
 [03] 潘玉彪：《计算机组成原理》获批华侨大学2023年课程思政示范课程立项建设项目
 
 [02] 潘玉彪：华侨大学第十一届青年教师“精彩一堂课”教学竞赛三等奖
