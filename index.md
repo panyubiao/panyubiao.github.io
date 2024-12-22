@@ -101,7 +101,7 @@
 </div>
 
 <div style="text-align: justify;">
-[02] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Weitao Zhang. "DCS5: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID-5 Systems", IEEE 9th International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Tianjin, China, August 2014.<br/>
+[02] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Weitao Zhang. "DCS5: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID-5 Systems", IEEE 9th International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Tianjin, China, August 2014.<br><br><br>
 [01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，<strong>Yubiao Pan</strong>，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. <strong>(CCF A类期刊)</strong>
 </div>
 tt
