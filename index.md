@@ -8,7 +8,7 @@
 </table>
 
 <div style="text-align: justify;">
-潘玉彪：博士，副教授，硕士生导师；2010年在中国科学技术大学计算机科学与技术学院获得计算机科学与技术工学学士学位，同年硕博连读中科大计算机学院并于2015年获得计算机软件与理论专业博士学位；2015年7月至2016年11月就职于华为技术有限公司2012实验室，任算法工程师；2016年12月调入华侨大学计算机科学与技术学院工作从事科研教学工作。入选福建省高层次人才，厦门市高层次人才，泉州高层次人才。主要从事计算机存储系统（包括云存储，分布式存储，键值存储等）相关算法及架构的优化研究，以及冗余算法（纠删码等）和数据压缩技术（重复数据删除，压缩算法）在大数据存储系统中的应用研究,test。
+潘玉彪：博士，副教授，硕士生导师；2010年在中国科学技术大学计算机科学与技术学院获得计算机科学与技术工学学士学位，同年硕博连读中科大计算机学院并于2015年获得计算机软件与理论专业博士学位；2015年7月至2016年11月就职于华为技术有限公司2012实验室，任算法工程师；2016年12月调入华侨大学计算机科学与技术学院工作从事科研教学工作。入选福建省高层次人才，厦门市高层次人才，泉州高层次人才。主要从事计算机存储系统（包括云存储，分布式存储，键值存储等）相关算法及架构的优化研究，以及冗余算法（纠删码等）和数据压缩技术（重复数据删除，压缩算法）在大数据存储系统中的应用研究。
 </div>
 
 ## 招生方向
@@ -20,6 +20,7 @@
 
 ## 科研信息
 ### 1）学术论文
+<div style="text-align: justify;">
 [22] Xinwei Lin, **Yubiao Pan***, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
 
 [21] **Yubiao Pan***, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
@@ -63,6 +64,7 @@
 [02] **Yubiao Pan**, Yongkun Li, Yinlong Xu, Weitao Zhang. "DCS5: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID-5 Systems", IEEE 9th International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Tianjin, China, August 2014.
 
 [01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，**Yubiao Pan**，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. **(CCF A类期刊)**
+</div>
 
 ### 2）科研项目
 *   大容量固态硬盘闪存转换层性能优化研究（No.2021J01319），福建省自然科学基金面上项目，主持，结题，2021.11-2024.11 
