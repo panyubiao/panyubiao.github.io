@@ -1,13 +1,13 @@
 <table border='0'>
   <tr>
     <td width="75%">
-      <h1>潘玉彪d</h1>
+      <h1>潘玉彪dt</h1>
       <p><b>华侨大学计算机科学与技术学院</b></p>
       <p><b>邮箱：panyubiao@hqu.edu.cn</b></p>
       <p><b>研究方向：计算机存储系统（包括云存储，分布式存储，键值存储等）</b></p>
     </td>
     <td width="25%">
-      <img src="/pyb.png" width="100%" align="center" valign="center">
+      <img src="/pyb.png" style="max-height: 100%; max-width: 100%;">
     </td>
   </tr>
 </table>
