@@ -22,7 +22,7 @@
 ### 1）学术论文
 <div style="text-align: justify;">
 [22] Xinwei Lin, **Yubiao Pan***, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
-
+</div>
 [21] **Yubiao Pan***, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
 
 [20] Feixiong Huang, **Yubiao Pan***, Huizhen Zhang, Mingwei Lin, "CDNRocks: Computable Data Nodes with RocksDB to Improve the Read Performance of LSM-tree-based Distributed Key-Value Storage Systems", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
@@ -64,7 +64,7 @@
 [02] **Yubiao Pan**, Yongkun Li, Yinlong Xu, Weitao Zhang. "DCS5: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID-5 Systems", IEEE 9th International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Tianjin, China, August 2014.
 
 [01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，**Yubiao Pan**，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. **(CCF A类期刊)**
-</div>
+
 
 ### 2）科研项目
 *   大容量固态硬盘闪存转换层性能优化研究（No.2021J01319），福建省自然科学基金面上项目，主持，结题，2021.11-2024.11 
