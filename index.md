@@ -19,6 +19,9 @@
 
 
 ## 科研信息
+### <span style="color: red; background-color: yellow;">News!</span>
+
+
 ### 1）学术论文
 <div style="text-align: justify;">
 [22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong> 
