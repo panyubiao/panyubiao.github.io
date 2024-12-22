@@ -60,10 +60,11 @@
 [04] Biaobiao Shen, Yongkun Li, Yinlong Xu, <strong>Yubiao Pan</strong>. "A Light-weight Hot Data Identification Scheme via Grouping-based LRU Lists." Proceedings of the 15th International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP), Full Paper, Zhangjiajie, China, November. 2015. <strong>(CCF C类会议)</strong>
 <br><br>
 [03] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Zhipeng Li. "Grouping-based Elastic Striping with Hotness Awareness for Improving SSD RAID Performance", Proceedings of the 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Regular paper(AR: 50/229 = 21.8%), Rio de Janeiro, Brazil, June 2015. <strong>(CCF B类会议)</strong>
-<br>
+<br><br>
 [02] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Weitao Zhang. "DCS5: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID-5 Systems", IEEE 9th International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Tianjin, China, August 2014.
 <br><br>
 [01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，<strong>Yubiao Pan</strong>，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. <strong>(CCF A类期刊)</strong>
+<br><br>
 </div>
 
 
