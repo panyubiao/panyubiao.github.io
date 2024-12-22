@@ -22,86 +22,37 @@
 ### 1）学术论文
 <div style="text-align: justify;">
 [22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong> 
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [21] <strong>Yubiao Pan*</strong>, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [20] Feixiong Huang, <strong>Yubiao Pan*</strong>, Huizhen Zhang, Mingwei Lin, "CDNRocks: Computable Data Nodes with RocksDB to Improve the Read Performance of LSM-tree-based Distributed Key-Value Storage Systems", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [19] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "MTDB: An LSM-tree-based Key-Value Store Using a Multi-tree Structure to Improve Read Performance", The Journal of Supercomputing, 80(16): 23995–24025, 2024. <strong>(CCF C类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [18] Jianing Zhao, <strong>Yubiao Pan*</strong>, Huizhen Zhang, Mingwei Lin, Xin Luo, Zeshui Xu, "InPlaceKV: In-place Update Scheme for SSD-based KV Storage Systems under Update-intensive Workloads", Cluster Computing, vol.27, no.2, pp.1527-1540, 2024.
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [17] Jianpeng Zhang, Mingwei Lin, <strong>Yubiao Pan*</strong>, Zeshui Xu, "CRFTL: Cache Reallocation-based Page-Level Flash Translation Layer for Smartphones", IEEE Transactions on Consumer Electronics (TCE), vol.69, no.3, pp.671-679, 2023.
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [16] <strong>Yubiao Pan*</strong>, Hao Chen, Jianing Zhao, Yinlong Xu, "HCFTL: A Locality-Aware Flash Translation Layer for Efficient Address Translation", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol.41, no.8, pp.2477-2489, 2022. <strong>(CCF A类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
+<br><br>
 [15] Yuhan Luo, Mingwei Lin, <strong>Yubiao Pan</strong>, Zeshui Xu, "Dual Locality-Based Flash Translation Layer for NAND Flash-Based Consumer Electronics", IEEE Transactions on Consumer Electronics (TCE), vol.68, no.3, pp.141-148, 2022. <strong>(Honored with third place in the Chester W. Sall Memorial Awards 2014)</strong>
-</div>
-
-<div style="text-align: justify;">
-[14] <strong>Yubiao Pan*</strong>, Mingwei Lin, Zhixiong Wu, Huizhen Zhang, Zeshui Xu, "Caching-aware Garbage Collection to Improve Performance and Lifetime for NAND Flash SSDs", IEEE Transactions on Consumer Electronics (TCE), vol.67, no.2, pp.281-290, 2021.
-</div>
-
-<div style="text-align: justify;">
-[13] <strong>Yubiao Pan*</strong>, Mingwei Lin, "ACS: an Alternate Coding Scheme to Improve Degrade Read Performance for SSD-based RAID5 Systems", Int. J. High Performance Systems Architecture, vol. 10, no. 2, pp.70-79, 2021.
-</div>
-
-<div style="text-align: justify;">
-[12] <strong>Yubiao Pan*</strong>, Yongkun Li, Huizhen Zhang, Hao Chen, Mingwei Lin, "GFTL: Group-level Mapping in Flash Translation Layer to Provide Efficient Address Translation for NAND Flash-based SSDs", IEEE Transactions on Consumer Electronics (TCE), vol.66, no.3, pp.242-250, 2020. 
-</div>
-
-<div style="text-align: justify;">
-[11] Hao Chen, <strong>Yubiao Pan</strong>, Cheng Li, Yinlong Xu, "ECR: Eviction-cost-aware Cache Management Policy for Page-level Flash-based SSDs", Concurrency and Computation: Practice and Experience (CCPE), 2019. <strong>(CCF C类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
-[10] Hao Chen, Cheng Li, <strong>Yubiao Pan</strong>, Min Lv, Yongkun Li, Yinlong Xu, "HCFTL: A Locality-aware Page-Level Flash Translation Layer", Design, Automation and Test in Europe (DATE), Full Paper, Florence, Italy, March 2019. <strong>(CCF B类会议)</strong>
-</div>
-
-<div style="text-align: justify;">
-[09] <strong>Yubiao Pan*</strong>, Yongkun Li, Huizhen Zhang, Yinlong Xu. "Lifetime-aware FTL to improve the lifetime and performance of solid-state drives", Future Generation Computer Systems (FGCS), vol 93, pp.58-67, 2019. <strong>(CCF C类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
-[08] Caiyin Liu, Min Lv, <strong>Yubiao Pan</strong>, Hao Chen, Yongkun Li, Cheng Li, Yinlong Xu . "LCR: Load-aware Cache Replacement Algorithm for Flash-based SSDs", Proceedings of The 13th IEEE International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Chongqing, China, August 2018.
-</div>
-
-<div style="text-align: justify;">
-[07] Jie Liang, Yinlong Xu, Yongkun Li, <strong>Yubiao Pan</strong>. "ISM - An Intra-Stripe Data Migration Approach for RAID-5 Scaling", Proceedings of The 12th IEEE International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Shenzhen, China, August 2017.
-</div>
-
-<div style="text-align: justify;">
-[06] Yongkun Li，Biaobiao Shen，<strong>Yubiao Pan</strong>，Yinlong Xu，Zhipeng Li，John C.S.Lui. "Workload-aware Elastic Striping with Hot Data Identification for SSD RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 36, no. 5, pp.815-828, 2017. <strong>(CCF A类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
-[05] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Biaobiao Shen. "DCS: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 35, no. 8, pp.1372-1385, 2016. <strong>(CCF A类期刊)</strong>
-</div>
-
-<div style="text-align: justify;">
-[04] Biaobiao Shen, Yongkun Li, Yinlong Xu, <strong>Yubiao Pan</strong>. "A Light-weight Hot Data Identification Scheme via Grouping-based LRU Lists." Proceedings of the 15th International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP), Full Paper, Zhangjiajie, China, November. 2015. <strong>(CCF C类会议)</strong>
-</div>
-
-<div style="text-align: justify;">
-[03] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Zhipeng Li. "Grouping-based Elastic Striping with Hotness Awareness for Improving SSD RAID Performance", Proceedings of the 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Regular paper(AR: 50/229 = 21.8%), Rio de Janeiro, Brazil, June 2015. <strong>(CCF B类会议)</strong><br>
+<br><br>
+[14] <strong>Yubiao Pan*</strong>, Mingwei Lin, Zhixiong Wu, Huizhen Zhang, Zeshui Xu, "Caching-aware Garbage Collection to Improve Performance and Lifetime for NAND Flash SSDs", IEEE Transactions on Consumer Electronics (TCE), vol.67, no.2, pp.281-290, 2021.<br><br>
+[13] <strong>Yubiao Pan*</strong>, Mingwei Lin, "ACS: an Alternate Coding Scheme to Improve Degrade Read Performance for SSD-based RAID5 Systems", Int. J. High Performance Systems Architecture, vol. 10, no. 2, pp.70-79, 2021.<br><br>
+[12] <strong>Yubiao Pan*</strong>, Yongkun Li, Huizhen Zhang, Hao Chen, Mingwei Lin, "GFTL: Group-level Mapping in Flash Translation Layer to Provide Efficient Address Translation for NAND Flash-based SSDs", IEEE Transactions on Consumer Electronics (TCE), vol.66, no.3, pp.242-250, 2020. <br><br>
+[11] Hao Chen, <strong>Yubiao Pan</strong>, Cheng Li, Yinlong Xu, "ECR: Eviction-cost-aware Cache Management Policy for Page-level Flash-based SSDs", Concurrency and Computation: Practice and Experience (CCPE), 2019. <strong>(CCF C类期刊)</strong><br><br>
+[10] Hao Chen, Cheng Li, <strong>Yubiao Pan</strong>, Min Lv, Yongkun Li, Yinlong Xu, "HCFTL: A Locality-aware Page-Level Flash Translation Layer", Design, Automation and Test in Europe (DATE), Full Paper, Florence, Italy, March 2019. <strong>(CCF B类会议)</strong><br><br>
+[09] <strong>Yubiao Pan*</strong>, Yongkun Li, Huizhen Zhang, Yinlong Xu. "Lifetime-aware FTL to improve the lifetime and performance of solid-state drives", Future Generation Computer Systems (FGCS), vol 93, pp.58-67, 2019. <strong>(CCF C类期刊)</strong><br><br>
+[08] Caiyin Liu, Min Lv, <strong>Yubiao Pan</strong>, Hao Chen, Yongkun Li, Cheng Li, Yinlong Xu . "LCR: Load-aware Cache Replacement Algorithm for Flash-based SSDs", Proceedings of The 13th IEEE International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Chongqing, China, August 2018.<br><br>
+[07] Jie Liang, Yinlong Xu, Yongkun Li, <strong>Yubiao Pan</strong>. "ISM - An Intra-Stripe Data Migration Approach for RAID-5 Scaling", Proceedings of The 12th IEEE International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Shenzhen, China, August 2017.<br><br>
+[06] Yongkun Li，Biaobiao Shen，<strong>Yubiao Pan</strong>，Yinlong Xu，Zhipeng Li，John C.S.Lui. "Workload-aware Elastic Striping with Hot Data Identification for SSD RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 36, no. 5, pp.815-828, 2017. <strong>(CCF A类期刊)</strong><br><br>
+[05] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Biaobiao Shen. "DCS: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 35, no. 8, pp.1372-1385, 2016. <strong>(CCF A类期刊)</strong><br><br>
+[04] Biaobiao Shen, Yongkun Li, Yinlong Xu, <strong>Yubiao Pan</strong>. "A Light-weight Hot Data Identification Scheme via Grouping-based LRU Lists." Proceedings of the 15th International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP), Full Paper, Zhangjiajie, China, November. 2015. <strong>(CCF C类会议)</strong><br><br>
+[03] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Zhipeng Li. "Grouping-based Elastic Striping with Hotness Awareness for Improving SSD RAID Performance", Proceedings of the 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Regular paper(AR: 50/229 = 21.8%), Rio de Janeiro, Brazil, June 2015. <strong>(CCF B类会议)</strong><br><br>
 [02] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Weitao Zhang. "DCS5: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID-5 Systems", IEEE 9th International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Tianjin, China, August 2014.<br><br>
 [01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，<strong>Yubiao Pan</strong>，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. <strong>(CCF A类期刊)</strong>
 </div>
-tt
+
 
 ### 2）科研项目
 *   大容量固态硬盘闪存转换层性能优化研究（No.2021J01319），福建省自然科学基金面上项目，主持，结题，2021.11-2024.11 
