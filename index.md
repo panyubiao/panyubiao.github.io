@@ -23,13 +23,15 @@
 <div style="text-align: justify;">
 [22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong> 
 </div>
-
-[21] **Yubiao Pan***, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
-
-[20] Feixiong Huang, **Yubiao Pan***, Huizhen Zhang, Mingwei Lin, "CDNRocks: Computable Data Nodes with RocksDB to Improve the Read Performance of LSM-tree-based Distributed Key-Value Storage Systems", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
-
-[19] Xinwei Lin, **Yubiao Pan***, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "MTDB: An LSM-tree-based Key-Value Store Using a Multi-tree Structure to Improve Read Performance", The Journal of Supercomputing, 80(16): 23995–24025, 2024. **(CCF C类期刊)**
-
+<div style="text-align: justify;">
+[21] <strong>Yubiao Pan*</strong>, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong>
+</div>
+<div style="text-align: justify;">
+[20] Feixiong Huang, <strong>Yubiao Pan*</strong>, Huizhen Zhang, Mingwei Lin, "CDNRocks: Computable Data Nodes with RocksDB to Improve the Read Performance of LSM-tree-based Distributed Key-Value Storage Systems", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong>
+</div>
+<div style="text-align: justify;">
+[19] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "MTDB: An LSM-tree-based Key-Value Store Using a Multi-tree Structure to Improve Read Performance", The Journal of Supercomputing, 80(16): 23995–24025, 2024. <strong>(CCF C类期刊)</strong>
+</div>
 [18] Jianing Zhao, **Yubiao Pan***, Huizhen Zhang, Mingwei Lin, Xin Luo, Zeshui Xu, "InPlaceKV: In-place Update Scheme for SSD-based KV Storage Systems under Update-intensive Workloads", Cluster Computing, vol.27, no.2, pp.1527-1540, 2024.
 
 [17] Jianpeng Zhang, Mingwei Lin, **Yubiao Pan***, Zeshui Xu, "CRFTL: Cache Reallocation-based Page-Level Flash Translation Layer for Smartphones", IEEE Transactions on Consumer Electronics (TCE), vol.69, no.3, pp.671-679, 2023.
