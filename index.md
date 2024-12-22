@@ -105,10 +105,10 @@
 </div>
 
 
-<div style="text-align: justify;">
-[01] Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，<strong>Yubiao Pan</strong>，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. <strong>(CCF A类期刊)</strong>
+[01]<div style="text-align: justify;">
+ Liping Xiang，Yinlong Xu，John C.S.Lui，Qian Chang，<strong>Yubiao Pan</strong>，Runhui Li. "A Hybrid Approach of Failed Disk Recovery Using RAID-6 Codes: Algorithms and Performance Evaluation", ACM Transactions on Storage (TOS), vol. 7, no. 1, pp.1-34, 2011. <strong>(CCF A类期刊)</strong>
 </div>
-
+tt
 
 ### 2）科研项目
 *   大容量固态硬盘闪存转换层性能优化研究（No.2021J01319），福建省自然科学基金面上项目，主持，结题，2021.11-2024.11 
