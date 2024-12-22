@@ -1,11 +1,9 @@
 <table border='0'>
   <tr>
-    <td width="100%">
         <h1>潘玉彪</h1>
         <p><b>华侨大学计算机科学与技术学院</b></p>
         <p><b>邮箱：panyubiao@hqu.edu.cn</b></p>
         <p><b>研究方向：计算机存储系统（包括云存储，分布式存储，键值存储等）</b></p>        
-    </td>
   </tr>
 </table>
 
