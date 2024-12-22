@@ -17,12 +17,11 @@
 软件工程（学硕）、电子信息（专硕）
 
 
-
-
-
 ## 科研信息
 ### <span style="color: red; background-color: yellow;">News!</span>
-
+<div style="text-align: justify;">
+  恭喜林鑫伟的论文"RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores"被CCF C类期刊The Journal of Supercomputing录用！祝贺鑫伟！
+</div>
 
 ### 1）学术论文
 <div style="text-align: justify;">
