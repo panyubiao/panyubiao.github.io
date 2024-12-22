@@ -20,8 +20,9 @@
 
 ## 科研信息
 ### 1）学术论文
-[22] Xinwei Lin, **Yubiao Pan***, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)** 
-
+<div style="text-align: justify;">
+[22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong> 
+</div>
 
 [21] **Yubiao Pan***, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. **(CCF C类期刊)**
 
