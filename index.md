@@ -25,11 +25,11 @@
 
 ### 1）学术论文
 <div style="text-align: justify;">
-[22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong> 
+[22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", The Journal of Supercomputing, 81(343): 1-29, 2025. <strong>(CCF C类期刊)</strong> 
 <br><br>
-[21] <strong>Yubiao Pan*</strong>, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong>
+[21] <strong>Yubiao Pan*</strong>, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", The Journal of Supercomputing, 81(156): 1-22, 2025. <strong>(CCF C类期刊)</strong>
 <br><br>
-[20] Feixiong Huang, <strong>Yubiao Pan*</strong>, Huizhen Zhang, Mingwei Lin, "CDNRocks: Computable Data Nodes with RocksDB to Improve the Read Performance of LSM-tree-based Distributed Key-Value Storage Systems", accepted by The Journal of Supercomputing, 2024. <strong>(CCF C类期刊)</strong>
+[20] Feixiong Huang, <strong>Yubiao Pan*</strong>, Huizhen Zhang, Mingwei Lin, "CDNRocks: Computable Data Nodes with RocksDB to Improve the Read Performance of LSM-tree-based Distributed Key-Value Storage Systems", The Journal of Supercomputing, 81(57): 1-31, 2025. <strong>(CCF C类期刊)</strong>
 <br><br>
 [19] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "MTDB: An LSM-tree-based Key-Value Store Using a Multi-tree Structure to Improve Read Performance", The Journal of Supercomputing, 80(16): 23995–24025, 2024. <strong>(CCF C类期刊)</strong>
 <br><br>
