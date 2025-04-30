@@ -59,7 +59,7 @@
 <br><br>
 [07] Jie Liang, Yinlong Xu, Yongkun Li, <strong>Yubiao Pan</strong>. "ISM - An Intra-Stripe Data Migration Approach for RAID-5 Scaling", Proceedings of The 12th IEEE International Conference on Networking, Architecture, and Storage (NAS), Full Paper, Shenzhen, China, August 2017.
 <br><br>
-[06] Yongkun Li，Biaobiao Shen，<strong>Yubiao Pan</strong>，Yinlong Xu，Zhipeng Li，John C.S.Lui. "Workload-aware Elastic Striping with Hot Data Identification for SSD RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), vol. 36, no. 5, pp.815-828, 2017. <strong>(CCF A类期刊)</strong>
+[06] Yongkun Li，Biaobiao Shen，<strong>Yubiao Pan</strong>，Yinlong Xu，Zhipeng Li，John C.S.Lui. "Workload-aware Elastic Striping with Hot Data Identification for SSD RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (<strong>TCAD</strong>), vol. 36, no. 5, pp.815-828, 2017. <strong>(CCF A类期刊)</strong>
 <br><br>
 [05] <strong>Yubiao Pan</strong>, Yongkun Li, Yinlong Xu, Biaobiao Shen. "DCS: Diagonal Coding Scheme for Enhancing the Endurance of SSD-based RAID Arrays", IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (<strong>TCAD</strong>), vol. 35, no. 8, pp.1372-1385, 2016. <strong>(CCF A类期刊)</strong>
 <br><br>
