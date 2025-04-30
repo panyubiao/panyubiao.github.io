@@ -25,6 +25,8 @@
 
 ### 1）学术论文
 <div style="text-align: justify;">
+[23] Qingyang Zhang, Yongkun Li, <strong>Yubiao Pan</strong>, Haoting Tang, Yinlong Xu, "Mitigating Resource Usage Dependency in Sorting-based KV Stores on Hybrid Storage Devices via Operation Decoupling", Proceedings of the 2025 USENIX Annual Technical Conference (USENIX ATC 2025), July 7-9, Boston, MA, USA, 2025. <strong>(CCF A类会议)</strong> 
+<br><br>
 [22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", The Journal of Supercomputing, 81(343): 1-29, 2025. <strong>(CCF C类期刊)</strong> 
 <br><br>
 [21] <strong>Yubiao Pan*</strong>, Jianing Zhao, Yixiang Cai, Huizhen Zhang, Mingwei Lin, "PMCKV: Pipeline-based Multi-Compactions KV Stores to Improve the System Performance", The Journal of Supercomputing, 81(156): 1-22, 2025. <strong>(CCF C类期刊)</strong>
