@@ -20,11 +20,13 @@
 ## 科研信息
 ### <span style="color: red; background-color: yellow;">News!</span>
 <div style="text-align: justify;">
-  恭喜林鑫伟的论文"RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores"被CCF C类期刊The Journal of Supercomputing录用！祝贺鑫伟！
+  恭喜蔡逸翔的论文"SoKV: Scan Performance Optimization for KV Separation with Adaptive Dynamic Grouping and GC-based LSM-tree Management"被CCF C类期刊Future Generation Computer Systems录用！祝贺逸翔！
 </div>
 
 ### 1）学术论文
 <div style="text-align: justify;">
+[24] Yixiang Cai, <strong>Yubiao Pan</strong>, Xinwei Lin, Jie Xu, Huizhen Zhang, Mingwei Lin, "SoKV: Scan Performance Optimization for KV Separation with Adaptive Dynamic Grouping and GC-based LSM-tree Management", accepted by Future Generation Computer Systems (FGCS), 2025. <strong>(CCF C类期刊)</strong> 
+<br><br>
 [23] Qingyang Zhang, Yongkun Li, <strong>Yubiao Pan</strong>, Haoting Tang, Yinlong Xu, "Mitigating Resource Usage Dependency in Sorting-based KV Stores on Hybrid Storage Devices via Operation Decoupling", Proceedings of the 2025 USENIX Annual Technical Conference (<strong>USENIX ATC</strong>), July 7-9, Boston, MA, USA, 2025. <strong>(CCF A类会议)</strong> 
 <br><br>
 [22] Xinwei Lin, <strong>Yubiao Pan*</strong>, Wenjuan Feng, Huizhen Zhang, Mingwei Lin, "RIOKV: Reducing Iterator Overhead for Efficient Short-Range Query in LSM-Tree-based Key-Value Stores", The Journal of Supercomputing, 81(343): 1-29, 2025. <strong>(CCF C类期刊)</strong> 
