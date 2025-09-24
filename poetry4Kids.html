@@ -125,6 +125,35 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* 响应式调整计数器和标识 */
+        @media (max-width: 640px) { /* 手机设备 */
+            .counter-container {
+                font-size: 12px;
+                padding: 0 4px;
+            }
+            .counter-container .powered-by {
+                font-size: 11px;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) { /* iPad设备 */
+            .counter-container {
+                font-size: 14px;
+            }
+            .counter-container .powered-by {
+                font-size: 13px;
+            }
+        }
+
+        @media (min-width: 1025px) { /* 桌面设备 */
+            .counter-container {
+                font-size: 15px;
+            }
+            .counter-container .powered-by {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body class="overflow-hidden h-screen bg-light">
@@ -156,13 +185,13 @@
                     开始阅读 <i class="fa fa-arrow-right ml-2"></i>
                 </button>
                 
-                <!-- 访问计数器和标识 -->
-                <div class="counter-container absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary/50 flex flex-col items-center gap-2">
+                <!-- 访问计数器和标识 - 优化响应式布局 -->
+                <div class="counter-container absolute bottom-6 left-1/2 transform -translate-x-1/2 text-primary/50 flex flex-col items-center gap-1 px-2">
                     <div class="flex items-center gap-1">
                         <i class="fa fa-eye"></i>
                         <span>访问次数: <span id="visit-counter">0</span></span>
                     </div>
-                    <div class="text-sm font-medium">POWERED BY PYB</div>
+                    <div class="powered-by font-medium">POWERED BY PYB</div>
                 </div>
                 
                 <!-- 底部装饰 -->
