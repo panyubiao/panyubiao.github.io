@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>75首古诗</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 配置Tailwind自定义颜色和字体 - 古典风格主题 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5A2B',      // 棕色调作为主色，体现古朴感
+                        secondary: '#5D4037',    // 深棕色文本
+                        accent: '#D7CCC8',       // 浅棕色强调
+                        light: '#F5F5F5',        // 浅灰色背景
+                        paper: '#FCFAF7',        // 纸张色
+                    },
+                    fontFamily: {
+                        poetry: ['"Ma Shan Zheng"', '"Noto Serif SC"', 'serif'],
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        title: ['"ZCOOL XiaoWei"', '"Noto Serif SC"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .bg-paper {
+                background-color: #FCFAF7;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238b5a2b' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+            .content-auto {
+                content-visibility: auto;
+            }
+            .touch-target {
+                min-height: 48px;
+                min-width: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .book-border {
+                border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%238B5A2B' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3C/g%3E%3C/svg%3E") 25;
+            }
+        }
+    </style>
+    
+    <!-- 引入中文字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 页面过渡动画 */
+        .page {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .page.hidden {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+        }
+        .page.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* 移动设备触摸反馈优化 */
+        button {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* 竖屏和横屏布局调整 */
+        @media (orientation: landscape) and (max-width: 1024px) {
+            #poetry-content {
+                max-height: 60vh;
+                overflow-y: auto;
+                padding: 10px 0;
+            }
+        }
+        
+        /* 滚动条美化 */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 90, 43, 0.2);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        /* 目录项悬停效果 */
+        .toc-item {
+            transition: all 0.2s ease;
+        }
+        .toc-item:hover {
+            background-color: rgba(215, 204, 200, 0.2);
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="overflow-hidden h-screen bg-light">
+    <!-- 主容器 -->
+    <div id="app" class="relative h-full w-full">
+        <!-- 封面页 -->
+        <div id="cover-page" class="page active absolute inset-0 flex flex-col items-center justify-center bg-paper p-6">
+            <div class="max-w-3xl w-full text-center">
+                <!-- 装饰元素 -->
+                <div class="mb-8 opacity-70">
+                    <i class="fa fa-book text-5xl text-primary/60"></i>
+                </div>
+                
+                <!-- 主标题 -->
+                <h1 class="font-title text-4xl md:text-6xl lg:text-7xl text-primary mb-6 text-shadow tracking-wider">75首古诗</h1>
+                
+                <!-- 副标题 -->
+                <p class="text-secondary/80 text-lg md:text-xl mb-12 italic">小学生必备经典古诗文</p>
+                
+                <!-- 装饰分隔线 -->
+                <div class="flex items-center justify-center my-8">
+                    <div class="h-px bg-primary/20 w-24"></div>
+                    <div class="mx-4 text-primary/40"><i class="fa fa-leaf"></i></div>
+                    <div class="h-px bg-primary/20 w-24"></div>
+                </div>
+                
+                <!-- 引导按钮 -->
+                <button id="to-toc-btn" class="mt-8 bg-primary/10 hover:bg-primary/20 text-primary font-medium py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/30">
+                    开始阅读 <i class="fa fa-arrow-right ml-2"></i>
+                </button>
+                
+                <!-- 底部装饰 -->
+                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-primary/30 text-sm">
+                    <p>点击按钮进入目录页</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 目录页 -->
+        <div id="toc-page" class="page hidden hidden absolute inset-0 bg-paper p-4 overflow-y-auto">
+            <div class="max-w-3xl mx-auto">
+                <!-- 目录标题 -->
+                <div class="flex justify-between items-center mb-8 pt-4">
+                    <h2 class="font-title text-2xl md:text-3xl text-primary">古诗目录</h2>
+                    <button id="back-to-cover-btn" class="text-primary/70 hover:text-primary transition-colors">
+                        <i class="fa fa-home"></i> 封面
+                    </button>
+                </div>
+                
+                <!-- 朝代筛选器 -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <button class="toc-filter active px-3 py-1 rounded-full text-sm bg-primary/10 text-primary" data-dynasty="all">全部</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="汉">汉</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="北朝">北朝</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="唐">唐</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="宋">宋</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="元">元</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="明">明</button>
+                    <button class="toc-filter px-3 py-1 rounded-full text-sm bg-accent/30 text-secondary/80 hover:bg-primary/10 hover:text-primary transition-colors" data-dynasty="清">清</button>
+                </div>
+                
+                <!-- 目录列表 -->
+                <div id="toc-list" class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <!-- 目录项将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- 古诗内容页 -->
+        <div id="poetry-page" class="page hidden absolute inset-0 bg-paper p-4 sm:p-6 md:p-12">
+            <!-- 顶部信息 -->
+            <div class="flex justify-between items-start">
+                <div class="text-primary/80 text-sm md:text-base">
+                    <span id="current-page">1</span> / <span id="total-pages">75</span>
+                </div>
+                <button id="back-to-toc-btn" class="text-primary/70 hover:text-primary transition-colors p-2">
+                    <i class="fa fa-list"></i> 目录
+                </button>
+            </div>
+            
+            <!-- 古诗内容：在移动设备上允许滚动 -->
+            <div class="flex-grow flex flex-col items-center justify-center text-center px-3 md:px-4 lg:px-20 overflow-hidden">
+                <div class="max-w-full max-h-[60vh] sm:max-h-[70vh] overflow-y-auto py-2">
+                    <h1 id="poetry-title" class="font-poetry text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-primary mb-2 md:mb-3 text-shadow transition-all duration-500 transform hover:scale-105"></h1>
+                    <div id="poetry-dynasty-author" class="font-sans text-sm sm:text-base md:text-lg text-primary/80 italic mb-6 md:mb-8"></div>
+                    <div id="poetry-content" class="font-poetry text-lg sm:text-xl md:text-2xl lg:text-3xl text-secondary leading-loose md:leading-loose whitespace-pre-line"></div>
+                </div>
+            </div>
+            
+            <!-- 控制区：移动设备增大触摸区域 -->
+            <div class="flex justify-between items-end">
+                <!-- 上一页按钮 -->
+                <button id="prev-btn" class="touch-target bg-primary/10 hover:bg-primary/20 text-primary p-3 md:p-4 rounded-full transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i class="fa fa-arrow-left text-xl md:text-2xl"></i>
+                </button>
+                
+                <!-- 播放按钮 -->
+                <button id="play-btn" class="touch-target bg-primary/90 hover:bg-primary text-white p-4 md:p-6 rounded-full transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    <i class="fa fa-play text-2xl md:text-3xl"></i>
+                </button>
+                
+                <!-- 下一页按钮 -->
+                <button id="next-btn" class="touch-target bg-primary/10 hover:bg-primary/20 text-primary p-3 md:p-4 rounded-full transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary/30">
+                    <i class="fa fa-arrow-right text-xl md:text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- 移动端提示（首次加载显示） -->
+            <div id="mobile-hint" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-30 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm hidden md:block">
+                <i class="fa fa-info-circle mr-1"></i> 点击空白处隐藏提示 | 空格键播放/暂停 | 方向键翻页
+            </div>
+        </div>
+        
+        <!-- 加载提示 -->
+        <div id="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-paper/80 hidden">
+            <div class="text-primary text-2xl">加载中...</div>
+        </div>
+    </div>
+
+    <script>
+        // 小学生必备75首古诗完整数据
+        const poems = [
+            {
+                title: "江南",
+                dynasty: "汉",
+                author: "乐府",
+                content: "江南可采莲，莲叶何田田。\n鱼戏莲叶间。\n鱼戏莲叶东，鱼戏莲叶西，\n鱼戏莲叶南，鱼戏莲叶北。"
+            },
+            {
+                title: "长歌行",
+                dynasty: "汉",
+                author: "乐府",
+                content: "青青园中葵，朝露待日晞。\n阳春布德泽，万物生光辉。\n常恐秋节至，焜黄华叶衰。\n百川东到海，何时复西归？\n少壮不努力，老大徒伤悲。"
+            },
+            {
+                title: "敕勒歌",
+                dynasty: "北朝",
+                author: "民歌",
+                content: "敕勒川，阴山下。\n天似穹庐，笼盖四野。\n天苍苍，野茫茫，\n风吹草低见牛羊。"
+            },
+            {
+                title: "咏鹅",
+                dynasty: "唐",
+                author: "骆宾王",
+                content: "鹅，鹅，鹅，曲项向天歌。\n白毛浮绿水，红掌拨清波。"
+            },
+            {
+                title: "风",
+                dynasty: "唐",
+                author: "李峤",
+                content: "解落三秋叶，能开二月花。\n过江千尺浪，入竹万竿斜。"
+            },
+            {
+                title: "咏柳",
+                dynasty: "唐",
+                author: "贺知章",
+                content: "碧玉妆成一树高，万条垂下绿丝绦。\n不知细叶谁裁出，二月春风似剪刀。"
+            },
+            {
+                title: "回乡偶书",
+                dynasty: "唐",
+                author: "贺知章",
+                content: "少小离家老大回，乡音无改鬓毛衰。\n儿童相见不相识，笑问客从何处来。"
+            },
+            {
+                title: "凉州词",
+                dynasty: "唐",
+                author: "王之涣",
+                content: "黄河远上白云间，一片孤城万仞山。\n羌笛何须怨杨柳，春风不度玉门关。"
+            },
+            {
+                title: "登鹳雀楼",
+                dynasty: "唐",
+                author: "王之涣",
+                content: "白日依山尽，黄河入海流。\n欲穷千里目，更上一层楼。"
+            },
+            {
+                title: "春晓",
+                dynasty: "唐",
+                author: "孟浩然",
+                content: "春眠不觉晓，处处闻啼鸟。\n夜来风雨声，花落知多少？"
+            },
+            {
+                title: "凉州词",
+                dynasty: "唐",
+                author: "王翰",
+                content: "葡萄美酒夜光杯，欲饮琵琶马上催。\n醉卧沙场君莫笑，古来征战几人回？"
+            },
+            {
+                title: "出塞",
+                dynasty: "唐",
+                author: "王昌龄",
+                content: "秦时明月汉时关，万里长征人未还。\n但使龙城飞将在，不教胡马度阴山！"
+            },
+            {
+                title: "芙蓉楼送辛渐",
+                dynasty: "唐",
+                author: "王昌龄",
+                content: "寒雨连江夜入吴，平明送客楚山孤。\n洛阳亲友如相问，一片冰心在玉壶。"
+            },
+            {
+                title: "鹿柴",
+                dynasty: "唐",
+                author: "王维",
+                content: "空山不见人，但闻人语响。\n返景入深林，复照青苔上。"
+            },
+            {
+                title: "送元二使安西",
+                dynasty: "唐",
+                author: "王维",
+                content: "渭城朝雨浥轻尘，客舍青青柳色新。\n劝君更尽一杯酒，西出阳关无故人。"
+            },
+            {
+                title: "九月九日忆山东兄弟",
+                dynasty: "唐",
+                author: "王维",
+                content: "独在异乡为异客，每逢佳节倍思亲。\n遥知兄弟登高处，遍插茱萸少一人。"
+            },
+            {
+                title: "静夜思",
+                dynasty: "唐",
+                author: "李白",
+                content: "床前明月光，疑是地上霜。\n举头望明月，低头思故乡。"
+            },
+            {
+                title: "古朗月行（节选）",
+                dynasty: "唐",
+                author: "李白",
+                content: "小时不识月，呼作白玉盘。\n又疑瑶台镜，飞在青云端。"
+            },
+            {
+                title: "望庐山瀑布",
+                dynasty: "唐",
+                author: "李白",
+                content: "日照香炉生紫烟，遥看瀑布挂前川。\n飞流直下三千尺，疑是银河落九天。"
+            },
+            {
+                title: "赠汪伦",
+                dynasty: "唐",
+                author: "李白",
+                content: "李白乘舟将欲行，忽闻岸上踏歌声。\n桃花潭水深千尺，不及汪伦送我情。"
+            },
+            {
+                title: "黄鹤楼送孟浩然之广陵",
+                dynasty: "唐",
+                author: "李白",
+                content: "故人西辞黄鹤楼，烟花三月下扬州。\n孤帆远影碧空尽，唯见长江天际流。"
+            },
+            {
+                title: "早发白帝城",
+                dynasty: "唐",
+                author: "李白",
+                content: "朝辞白帝彩云间，千里江陵一日还。\n两岸猿声啼不住，轻舟已过万重山。"
+            },
+            {
+                title: "望天门山",
+                dynasty: "唐",
+                author: "李白",
+                content: "天门中断楚江开，碧水东流至此回。\n两岸青山相对出，孤帆一片日边来。"
+            },
+            {
+                title: "别董大",
+                dynasty: "唐",
+                author: "高适",
+                content: "千里黄云白日曛，北风吹雁雪纷纷。\n莫愁前路无知己，天下谁人不识君？"
+            },
+            {
+                title: "绝句",
+                dynasty: "唐",
+                author: "杜甫",
+                content: "两个黄鹂鸣翠柳，一行白鹭上青天。\n窗含西岭千秋雪，门泊东吴万里船。"
+            },
+            {
+                title: "春夜喜雨",
+                dynasty: "唐",
+                author: "杜甫",
+                content: "好雨知时节，当春乃发生。\n随风潜入夜，润物细无声。\n野径云俱黑，江船火独明。\n晓看红湿处，花重锦官城。"
+            },
+            {
+                title: "绝句",
+                dynasty: "唐",
+                author: "杜甫",
+                content: "迟日江山丽，春风花草香。\n泥融飞燕子，沙暖睡鸳鸯。"
+            },
+            {
+                title: "江畔独步寻花",
+                dynasty: "唐",
+                author: "杜甫",
+                content: "黄师塔前江水东，春光懒困倚微风。\n桃花一簇开无主，可爱深红爱浅红？"
+            },
+            {
+                title: "枫桥夜泊",
+                dynasty: "唐",
+                author: "张继",
+                content: "月落乌啼霜满天，江枫渔火对愁眠。\n姑苏城外寒山寺，夜半钟声到客船。"
+            },
+            {
+                title: "滁州西涧",
+                dynasty: "唐",
+                author: "韦应物",
+                content: "独怜幽草涧边生，上有黄鹂深树鸣。\n春潮带雨晚来急，野渡无人舟自横。"
+            },
+            {
+                title: "游子吟",
+                dynasty: "唐",
+                author: "孟郊",
+                content: "慈母手中线，游子身上衣。\n临行密密缝，意恐迟迟归。\n谁言寸草心，报得三春晖。"
+            },
+            {
+                title: "早春呈水部张十八员外",
+                dynasty: "唐",
+                author: "韩愈",
+                content: "天街小雨润如酥，草色遥看近却无。\n最是一年春好处，绝胜烟柳满皇都。"
+            },
+            {
+                title: "渔歌子",
+                dynasty: "唐",
+                author: "张志和",
+                content: "西塞山前白鹭飞，桃花流水鳜鱼肥。\n青箬笠，绿蓑衣，斜风细雨不须归。"
+            },
+            {
+                title: "塞下曲",
+                dynasty: "唐",
+                author: "卢纶",
+                content: "月黑雁飞高，单于夜遁逃。\n欲将轻骑逐，大雪满弓刀。"
+            },
+            {
+                title: "望洞庭",
+                dynasty: "唐",
+                author: "刘禹锡",
+                content: "湖光秋月两相和，潭面无风镜未磨。\n遥望洞庭山水翠，白银盘里一青螺。"
+            },
+            {
+                title: "浪淘沙",
+                dynasty: "唐",
+                author: "刘禹锡",
+                content: "九曲黄河万里沙，浪淘风簸自天涯。\n如今直上银河去，同到牵牛织女家。"
+            },
+            {
+                title: "赋得古原草送别",
+                dynasty: "唐",
+                author: "白居易",
+                content: "离离原上草，一岁一枯荣。\n野火烧不尽，春风吹又生。\n远芳侵古道，晴翠接荒城。\n又送王孙去，萋萋满别情。"
+            },
+            {
+                title: "池上",
+                dynasty: "唐",
+                author: "白居易",
+                content: "小娃撑小艇，偷采白莲回。\n不解藏踪迹，浮萍一道开。"
+            },
+            {
+                title: "忆江南",
+                dynasty: "唐",
+                author: "白居易",
+                content: "江南好，风景旧曾谙。\n日出江花红胜火，春来江水绿如蓝。\n能不忆江南？"
+            },
+            {
+                title: "小儿垂钓",
+                dynasty: "唐",
+                author: "胡令能",
+                content: "蓬头稚子学垂纶，侧坐莓苔草映身。\n路人借问遥招手，怕得鱼惊不应人。"
+            },
+            {
+                title: "悯农（其一）",
+                dynasty: "唐",
+                author: "李绅",
+                content: "春种一粒粟，秋收万颗子。\n四海无闲田，农夫犹饿死。"
+            },
+            {
+                title: "悯农（其二）",
+                dynasty: "唐",
+                author: "李绅",
+                content: "锄禾日当午，汗滴禾下土。\n谁知盘中餐，粒粒皆辛苦。"
+            },
+            {
+                title: "江雪",
+                dynasty: "唐",
+                author: "柳宗元",
+                content: "千山鸟飞绝，万径人踪灭。\n孤舟蓑笠翁，独钓寒江雪。"
+            },
+            {
+                title: "寻隐者不遇",
+                dynasty: "唐",
+                author: "贾岛",
+                content: "松下问童子，言师采药去。\n只在此山中，云深不知处。"
+            },
+            {
+                title: "山行",
+                dynasty: "唐",
+                author: "杜牧",
+                content: "远上寒山石径斜，白云深处有人家。\n停车坐爱枫林晚，霜叶红于二月花。"
+            },
+            {
+                title: "清明",
+                dynasty: "唐",
+                author: "杜牧",
+                content: "清明时节雨纷纷，路上行人欲断魂。\n借问酒家何处有？牧童遥指杏花村。"
+            },
+            {
+                title: "江南春",
+                dynasty: "唐",
+                author: "杜牧",
+                content: "千里莺啼绿映红，水村山郭酒旗风。\n南朝四百八十寺，多少楼台烟雨中。"
+            },
+            {
+                title: "蜂",
+                dynasty: "唐",
+                author: "罗隐",
+                content: "不论平地与山尖，无限风光尽被占。\n采得百花成蜜后，为谁辛苦为谁甜？"
+            },
+            {
+                title: "江上渔者",
+                dynasty: "宋",
+                author: "范仲淹",
+                content: "江上往来人，但爱鲈鱼美。\n君看一叶舟，出没风波里。"
+            },
+            {
+                title: "元日",
+                dynasty: "宋",
+                author: "王安石",
+                content: "爆竹声中一岁除，春风送暖入屠苏。\n千门万户曈曈日，总把新桃换旧符。"
+            },
+            {
+                title: "泊船瓜洲",
+                dynasty: "宋",
+                author: "王安石",
+                content: "京口瓜洲一水间，钟山只隔数重山。\n春风又绿江南岸，明月何时照我还？"
+            },
+            {
+                title: "书湖阴先生壁",
+                dynasty: "宋",
+                author: "王安石",
+                content: "茅檐长扫净无苔，花木成畦手自栽。\n一水护田将绿绕，两山排闼送青来。"
+            },
+            {
+                title: "六月二十七日望湖楼醉书",
+                dynasty: "宋",
+                author: "苏轼",
+                content: "黑云翻墨未遮山，白雨跳珠乱入船。\n卷地风来忽吹散，望湖楼下水如天。"
+            },
+            {
+                title: "饮湖上初晴后雨",
+                dynasty: "宋",
+                author: "苏轼",
+                content: "水光潋滟晴方好，山色空蒙雨亦奇。\n欲把西湖比西子，淡妆浓抹总相宜。"
+            },
+            {
+                title: "惠崇春江晚景",
+                dynasty: "宋",
+                author: "苏轼",
+                content: "竹外桃花三两枝，春江水暖鸭先知。\n蒌蒿满地芦芽短，正是河豚欲上时。"
+            },
+            {
+                title: "题西林壁",
+                dynasty: "宋",
+                author: "苏轼",
+                content: "横看成岭侧成峰，远近高低各不同。\n不识庐山真面目，只缘身在此山中。"
+            },
+            {
+                title: "夏日绝句",
+                dynasty: "宋",
+                author: "李清照",
+                content: "生当作人杰，死亦为鬼雄。\n至今思项羽，不肯过江东。"
+            },
+            {
+                title: "三衢道中",
+                dynasty: "宋",
+                author: "曾几",
+                content: "梅子黄时日日晴，小溪泛尽却山行。\n绿阴不减来时路，添得黄鹂四五声。"
+            },
+            {
+                title: "示儿",
+                dynasty: "宋",
+                author: "陆游",
+                content: "死去元知万事空，但悲不见九州同。\n王师北定中原日，家祭无忘告乃翁。"
+            },
+            {
+                title: "秋夜将晓出篱门迎凉有感",
+                dynasty: "宋",
+                author: "陆游",
+                content: "三万里河东入海，五千仞岳上摩天。\n遗民泪尽胡尘里，南望王师又一年。"
+            },
+            {
+                title: "四时田园杂兴（其一）",
+                dynasty: "宋",
+                author: "范成大",
+                content: "昼出耘田夜绩麻，村庄儿女各当家。\n童孙未解供耕织，也傍桑阴学种瓜。"
+            },
+            {
+                title: "四时田园杂兴（其二）",
+                dynasty: "宋",
+                author: "范成大",
+                content: "梅子金黄杏子肥，麦花雪白菜花稀。\n日长篱落无人过，惟有蜻蜓蛱蝶飞。"
+            },
+            {
+                title: "小池",
+                dynasty: "宋",
+                author: "杨万里",
+                content: "泉眼无声惜细流，树阴照水爱晴柔。\n小荷才露尖尖角，早有蜻蜓立上头。"
+            },
+            {
+                title: "晓出净慈寺送林子方",
+                dynasty: "宋",
+                author: "杨万里",
+                content: "毕竟西湖六月中，风光不与四时同。\n接天莲叶无穷碧，映日荷花别样红。"
+            },
+            {
+                title: "春日",
+                dynasty: "宋",
+                author: "朱熹",
+                content: "胜日寻芳泗水滨，无边光景一时新。\n等闲识得东风面，万紫千红总是春。"
+            },
+            {
+                title: "观书有感",
+                dynasty: "宋",
+                author: "朱熹",
+                content: "半亩方塘一鉴开，天光云影共徘徊。\n问渠那得清如许？为有源头活水来。"
+            },
+            {
+                title: "题临安邸",
+                dynasty: "宋",
+                author: "林升",
+                content: "山外青山楼外楼，西湖歌舞几时休？\n暖风熏得游人醉，直把杭州作汴州。"
+            },
+            {
+                title: "游园不值",
+                dynasty: "宋",
+                author: "叶绍翁",
+                content: "应怜屐齿印苍苔，小扣柴扉久不开。\n春色满园关不住，一枝红杏出墙来。"
+            },
+            {
+                title: "乡村四月",
+                dynasty: "宋",
+                author: "翁卷",
+                content: "绿遍山原白满川，子规声里雨如烟。\n乡村四月闲人少，才了蚕桑又插田。"
+            },
+            {
+                title: "墨梅",
+                dynasty: "元",
+                author: "王冕",
+                content: "吾家洗砚池头树，个个花开淡墨痕。\n不要人夸好颜色，只留清气满乾坤。"
+            },
+            {
+                title: "石灰吟",
+                dynasty: "明",
+                author: "于谦",
+                content: "千锤万凿出深山，烈火焚烧若等闲。\n粉骨碎身浑不怕，要留清白在人间。"
+            },
+            {
+                title: "竹石",
+                dynasty: "清",
+                author: "郑燮",
+                content: "咬定青山不放松，立根原在破岩中。\n千磨万击还坚劲，任尔东西南北风。"
+            },
+            {
+                title: "所见",
+                dynasty: "清",
+                author: "袁枚",
+                content: "牧童骑黄牛，歌声振林樾。\n意欲捕鸣蝉，忽然闭口立。"
+            },
+            {
+                title: "村居",
+                dynasty: "清",
+                author: "高鼎",
+                content: "草长莺飞二月天，拂堤杨柳醉春烟。\n儿童散学归来早，忙趁东风放纸鸢。"
+            },
+            {
+                title: "己亥杂诗",
+                dynasty: "清",
+                author: "龚自珍",
+                content: "浩荡离愁白日斜，吟鞭东指即天涯。\n落红不是无情物，化作春泥更护花。"
+            }
+        ];
+
+        // 当前页码
+        let currentIndex = 0;
+        // 语音合成对象
+        let speechSynthesis = null;
+        let utterance = null;
+        let isPlaying = false;
+        let speechInitialized = false;
+
+        // DOM元素
+        const app = document.getElementById('app');
+        const coverPage = document.getElementById('cover-page');
+        const tocPage = document.getElementById('toc-page');
+        const poetryPage = document.getElementById('poetry-page');
+        const toTocBtn = document.getElementById('to-toc-btn');
+        const backToCoverBtn = document.getElementById('back-to-cover-btn');
+        const backToTocBtn = document.getElementById('back-to-toc-btn');
+        const tocList = document.getElementById('toc-list');
+        const tocFilters = document.querySelectorAll('.toc-filter');
+        
+        const titleEl = document.getElementById('poetry-title');
+        const dynastyAuthorEl = document.getElementById('poetry-dynasty-author');
+        const contentEl = document.getElementById('poetry-content');
+        const currentPageEl = document.getElementById('current-page');
+        const totalPagesEl = document.getElementById('total-pages');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const playBtn = document.getElementById('play-btn');
+        const loadingEl = document.getElementById('loading');
+        const mobileHint = document.getElementById('mobile-hint');
+
+        // 初始化语音合成
+        function initSpeech() {
+            if (!speechInitialized && 'speechSynthesis' in window) {
+                speechSynthesis = window.speechSynthesis;
+                
+                // 处理语音列表加载事件
+                speechSynthesis.onvoiceschanged = function() {
+                    speechInitialized = true;
+                };
+                
+                // 主动触发语音列表加载
+                speechSynthesis.getVoices();
+                speechInitialized = true;
+            }
+        }
+
+        // 生成目录
+        function generateToc() {
+            tocList.innerHTML = '';
+            
+            poems.forEach((poem, index) => {
+                const tocItem = document.createElement('button');
+                tocItem.className = `toc-item text-left px-3 py-2 rounded text-secondary hover:text-primary transition-colors w-full flex justify-between items-center`;
+                tocItem.setAttribute('data-index', index);
+                tocItem.setAttribute('data-dynasty', poem.dynasty);
+                
+                tocItem.innerHTML = `
+                    <span>
+                        <span class="inline-block w-6 text-primary/70 mr-2">${index + 1}.</span>
+                        ${poem.title}
+                    </span>
+                    <span class="text-xs text-primary/60">${poem.dynasty}·${poem.author}</span>
+                `;
+                
+                tocItem.addEventListener('click', () => {
+                    currentIndex = index;
+                    goToPoetryPage();
+                    loadPoem(currentIndex);
+                });
+                
+                tocList.appendChild(tocItem);
+            });
+        }
+
+        // 过滤目录
+        function filterToc(dynasty) {
+            const tocItems = document.querySelectorAll('.toc-item');
+            
+            tocItems.forEach(item => {
+                if (dynasty === 'all' || item.getAttribute('data-dynasty') === dynasty) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // 更新筛选器样式
+            tocFilters.forEach(filter => {
+                if (filter.getAttribute('data-dynasty') === dynasty) {
+                    filter.classList.add('bg-primary/10', 'text-primary');
+                    filter.classList.remove('bg-accent/30', 'text-secondary/80');
+                } else {
+                    filter.classList.remove('bg-primary/10', 'text-primary');
+                    filter.classList.add('bg-accent/30', 'text-secondary/80');
+                }
+            });
+        }
+
+        // 页面切换
+        function showPage(pageId) {
+            coverPage.classList.add('hidden');
+            tocPage.classList.add('hidden');
+            poetryPage.classList.add('hidden');
+            
+            document.getElementById(pageId).classList.remove('hidden');
+            setTimeout(() => {
+                coverPage.classList.remove('active');
+                tocPage.classList.remove('active');
+                poetryPage.classList.remove('active');
+                
+                document.getElementById(pageId).classList.add('active');
+            }, 50);
+        }
+
+        function goToTocPage() {
+            showPage('toc-page');
+        }
+
+        function goToCoverPage() {
+            showPage('cover-page');
+        }
+
+        function goToPoetryPage() {
+            showPage('poetry-page');
+        }
+
+        // 初始化应用
+        function init() {
+            // 设置总页数
+            totalPagesEl.textContent = poems.length;
+            
+            // 生成目录
+            generateToc();
+            
+            // 绑定页面切换事件
+            toTocBtn.addEventListener('click', goToTocPage);
+            backToCoverBtn.addEventListener('click', goToCoverPage);
+            backToTocBtn.addEventListener('click', goToTocPage);
+            
+            // 绑定目录筛选事件
+            tocFilters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    const dynasty = filter.getAttribute('data-dynasty');
+                    filterToc(dynasty);
+                });
+            });
+            
+            // 绑定事件 - 所有交互都先初始化语音
+            prevBtn.addEventListener('click', () => {
+                initSpeech();
+                goToPrev();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                initSpeech();
+                goToNext();
+            });
+            
+            playBtn.addEventListener('click', () => {
+                initSpeech();
+                togglePlay();
+            });
+            
+            // 点击空白处隐藏提示
+            app.addEventListener('click', (e) => {
+                if (!e.target.closest('button') && !e.target.closest('.toc-item')) {
+                    initSpeech();
+                    mobileHint.classList.add('hidden');
+                }
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', (e) => {
+                // 只在古诗页面响应键盘事件
+                if (poetryPage.classList.contains('active')) {
+                    initSpeech();
+                    handleKeyPress(e);
+                }
+            });
+            
+            // 触摸滑动支持（移动端）
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', (e) => {
+                // 只在古诗页面响应滑动事件
+                if (poetryPage.classList.contains('active')) {
+                    touchStartX = e.changedTouches[0].screenX;
+                }
+            }, false);
+            
+            document.addEventListener('touchend', (e) => {
+                // 只在古诗页面响应滑动事件
+                if (poetryPage.classList.contains('active')) {
+                    initSpeech();
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }
+            }, false);
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX - touchStartX > swipeThreshold) {
+                    goToPrev();
+                } else if (touchStartX - touchEndX > swipeThreshold) {
+                    goToNext();
+                }
+            }
+            
+            // 屏幕旋转时重新布局
+            window.addEventListener('orientationchange', () => {
+                if (poetryPage.classList.contains('active')) {
+                    loadPoem(currentIndex);
+                }
+            });
+        }
+
+        // 加载指定索引的诗
+        function loadPoem(index) {
+            // 显示加载状态
+            loadingEl.classList.remove('hidden');
+            
+            const poem = poems[index];
+            
+            // 更新内容（添加淡入效果）
+            poetryPage.classList.add('opacity-0');
+            setTimeout(() => {
+                titleEl.textContent = poem.title;
+                dynastyAuthorEl.textContent = `${poem.dynasty} · ${poem.author}`;
+                contentEl.textContent = poem.content;
+                currentPageEl.textContent = index + 1;
+                
+                // 重置播放状态
+                stopPlay();
+                
+                poetryPage.classList.remove('opacity-0');
+                loadingEl.classList.add('hidden');
+            }, 300);
+            
+            // 更新按钮状态
+            updateButtonStates();
+        }
+
+        // 上一页
+        function goToPrev() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                loadPoem(currentIndex);
+            }
+        }
+
+        // 下一页
+        function goToNext() {
+            if (currentIndex < poems.length - 1) {
+                currentIndex++;
+                loadPoem(currentIndex);
+            }
+        }
+
+        // 更新按钮状态
+        function updateButtonStates() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === poems.length - 1;
+            
+            if (prevBtn.disabled) {
+                prevBtn.classList.add('opacity-30');
+            } else {
+                prevBtn.classList.remove('opacity-30');
+            }
+            
+            if (nextBtn.disabled) {
+                nextBtn.classList.add('opacity-30');
+            } else {
+                nextBtn.classList.remove('opacity-30');
+            }
+        }
+
+        // 播放/暂停朗读
+        function togglePlay() {
+            mobileHint.classList.add('hidden');
+            
+            if (isPlaying) {
+                stopPlay();
+            } else {
+                startPlay();
+            }
+        }
+
+        // 开始朗读（兼容Safari和华为浏览器）
+        function startPlay() {
+            // 停止任何正在进行的朗读
+            stopPlay();
+            
+            // 检查浏览器是否支持语音合成
+            if (!('speechSynthesis' in window)) {
+                alert('您的浏览器不支持语音朗读功能，请更换浏览器（如Chrome）重试');
+                return;
+            }
+            
+            const poem = poems[currentIndex];
+            const textToRead = `${poem.title}，${poem.dynasty}${poem.author}。${poem.content.replace(/\n/g, '。')}`;
+            
+            // 获取可用语音并选择中文语音
+            let voices = speechSynthesis.getVoices();
+            let chineseVoice = null;
+            
+            // 遍历语音列表查找中文语音
+            for (let i = 0; i < voices.length; i++) {
+                const voice = voices[i];
+                if (voice.lang.includes('zh-CN') || voice.name.includes('中文') || voice.name.includes('Chinese')) {
+                    chineseVoice = voice;
+                    break;
+                }
+            }
+            
+            // 创建语音实例
+            utterance = new SpeechSynthesisUtterance(textToRead);
+            
+            // 设置中文语音（如找到）
+            if (chineseVoice) {
+                utterance.voice = chineseVoice;
+            } else {
+                alert('未检测到中文语音包，将使用默认语音朗读');
+            }
+            
+            // 基础配置
+            utterance.lang = 'zh-CN';
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            utterance.rate = isMobile ? 0.8 : 0.9;
+            utterance.pitch = 1.1;
+            utterance.volume = 1;
+            
+            // 朗读结束回调
+            utterance.onend = function() {
+                isPlaying = false;
+                playBtn.innerHTML = '<i class="fa fa-play text-2xl md:text-3xl"></i>';
+            };
+            
+            // 错误处理
+            utterance.onerror = function(event) {
+                console.error('语音合成错误:', event.error);
+                let errorMsg = '语音朗读失败，请重试';
+                
+                if (event.error === 'not-allowed') {
+                    errorMsg = '语音朗读权限被拒绝，请在浏览器设置中开启权限';
+                } else if (event.error === 'audio-capture') {
+                    errorMsg = '无法访问音频设备，请检查浏览器权限';
+                }
+                
+                alert(errorMsg);
+                isPlaying = false;
+                playBtn.innerHTML = '<i class="fa fa-play text-2xl md:text-3xl"></i>';
+            };
+            
+            // Safari需要延迟触发
+            setTimeout(() => {
+                speechSynthesis.speak(utterance);
+            }, 100);
+            
+            isPlaying = true;
+            playBtn.innerHTML = '<i class="fa fa-pause text-2xl md:text-3xl"></i>';
+        }
+
+        // 停止朗读
+        function stopPlay() {
+            if (isPlaying && utterance && speechSynthesis) {
+                speechSynthesis.cancel();
+                isPlaying = false;
+                playBtn.innerHTML = '<i class="fa fa-play text-2xl md:text-3xl"></i>';
+            }
+        }
+
+        // 键盘控制
+        function handleKeyPress(e) {
+            switch(e.key) {
+                case 'ArrowLeft':
+                    goToPrev();
+                    break;
+                case 'ArrowRight':
+                    goToNext();
+                    break;
+                case ' ': // 空格键播放/暂停
+                    e.preventDefault();
+                    togglePlay();
+                    break;
+            }
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
+    
