@@ -114,6 +114,17 @@
             background-color: rgba(215, 204, 200, 0.2);
             transform: translateX(4px);
         }
+
+        /* 计数器样式 */
+        .counter-container {
+            transition: all 0.5s ease-out;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .counter-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="overflow-hidden h-screen bg-light">
@@ -145,8 +156,17 @@
                     开始阅读 <i class="fa fa-arrow-right ml-2"></i>
                 </button>
                 
+                <!-- 访问计数器和标识 -->
+                <div class="counter-container absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary/50 flex flex-col items-center gap-2">
+                    <div class="flex items-center gap-1">
+                        <i class="fa fa-eye"></i>
+                        <span>访问次数: <span id="visit-counter">0</span></span>
+                    </div>
+                    <div class="text-sm font-medium">POWERED BY PYB</div>
+                </div>
+                
                 <!-- 底部装饰 -->
-                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-primary/30 text-sm">
+                <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-primary/30 text-sm">
                     <p>点击按钮进入目录页</p>
                 </div>
             </div>
@@ -727,6 +747,48 @@
         const playBtn = document.getElementById('play-btn');
         const loadingEl = document.getElementById('loading');
         const mobileHint = document.getElementById('mobile-hint');
+        const visitCounterEl = document.getElementById('visit-counter');
+        const counterContainer = document.querySelector('.counter-container');
+
+        // 初始化访问计数器
+        function initVisitCounter() {
+            // 从localStorage获取当前计数
+            let count = localStorage.getItem('poetryVisitCount');
+            
+            // 如果没有记录，初始化为0
+            if (count === null) {
+                count = 0;
+            }
+            
+            // 增加计数
+            count = parseInt(count) + 1;
+            
+            // 保存到localStorage
+            localStorage.setItem('poetryVisitCount', count);
+            
+            // 显示计数，添加数字增长动画
+            let displayCount = 0;
+            const duration = 1000; // 动画持续时间（毫秒）
+            const interval = 30; // 每次更新间隔
+            const steps = duration / interval;
+            const increment = Math.ceil(count / steps);
+            
+            const updateCounter = () => {
+                displayCount += increment;
+                if (displayCount >= count) {
+                    displayCount = count;
+                    clearInterval(timer);
+                }
+                visitCounterEl.textContent = displayCount;
+            };
+            
+            const timer = setInterval(updateCounter, interval);
+            
+            // 显示计数器容器（带动画）
+            setTimeout(() => {
+                counterContainer.classList.add('visible');
+            }, 500);
+        }
 
         // 初始化语音合成
         function initSpeech() {
@@ -829,6 +891,9 @@
 
         // 初始化应用
         function init() {
+            // 初始化访问计数器
+            initVisitCounter();
+            
             // 设置总页数
             totalPagesEl.textContent = poems.length;
             
