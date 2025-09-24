@@ -172,9 +172,10 @@
         // 当前页码
         let currentIndex = 0;
         // 语音合成对象
-        let speechSynthesis = window.speechSynthesis;
+        let speechSynthesis = null;
         let utterance = null;
         let isPlaying = false;
+        let speechInitialized = false;
 
         // DOM元素
         const app = document.getElementById('app');
@@ -189,7 +190,23 @@
         const loadingEl = document.getElementById('loading');
         const mobileHint = document.getElementById('mobile-hint');
 
-        // 初始化
+        // 初始化语音合成
+        function initSpeech() {
+            if (!speechInitialized && 'speechSynthesis' in window) {
+                speechSynthesis = window.speechSynthesis;
+                
+                // 处理语音列表加载事件
+                speechSynthesis.onvoiceschanged = function() {
+                    speechInitialized = true;
+                };
+                
+                // 主动触发语音列表加载
+                speechSynthesis.getVoices();
+                speechInitialized = true;
+            }
+        }
+
+        // 初始化应用
         function init() {
             // 设置总页数
             totalPagesEl.textContent = poems.length;
@@ -197,20 +214,35 @@
             // 加载第一首诗
             loadPoem(currentIndex);
             
-            // 绑定事件
-            prevBtn.addEventListener('click', goToPrev);
-            nextBtn.addEventListener('click', goToNext);
-            playBtn.addEventListener('click', togglePlay);
+            // 绑定事件 - 所有交互都先初始化语音
+            prevBtn.addEventListener('click', () => {
+                initSpeech();
+                goToPrev();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                initSpeech();
+                goToNext();
+            });
+            
+            playBtn.addEventListener('click', () => {
+                initSpeech();
+                togglePlay();
+            });
             
             // 点击空白处隐藏提示
             app.addEventListener('click', (e) => {
                 if (!e.target.closest('button')) {
+                    initSpeech();
                     mobileHint.classList.add('hidden');
                 }
             });
             
             // 键盘导航
-            document.addEventListener('keydown', handleKeyPress);
+            document.addEventListener('keydown', (e) => {
+                initSpeech();
+                handleKeyPress(e);
+            });
             
             // 触摸滑动支持（移动端）
             let touchStartX = 0;
@@ -221,26 +253,22 @@
             }, false);
             
             document.addEventListener('touchend', (e) => {
+                initSpeech();
                 touchEndX = e.changedTouches[0].screenX;
                 handleSwipe();
             }, false);
             
             function handleSwipe() {
-                // 滑动距离超过50px才触发翻页
                 const swipeThreshold = 50;
-                
                 if (touchEndX - touchStartX > swipeThreshold) {
-                    // 向右滑动，上一页
                     goToPrev();
                 } else if (touchStartX - touchEndX > swipeThreshold) {
-                    // 向左滑动，下一页
                     goToNext();
                 }
             }
             
             // 屏幕旋转时重新布局
             window.addEventListener('orientationchange', () => {
-                // 重新加载当前诗，适应新的屏幕尺寸
                 loadPoem(currentIndex);
             });
         }
@@ -256,7 +284,6 @@
             app.classList.add('opacity-0');
             setTimeout(() => {
                 titleEl.textContent = poem.title;
-                // 显示朝代和作者
                 dynastyAuthorEl.textContent = `${poem.dynasty} · ${poem.author}`;
                 contentEl.textContent = poem.content;
                 currentPageEl.textContent = index + 1;
@@ -265,7 +292,6 @@
                 stopPlay();
                 
                 app.classList.remove('opacity-0');
-                // 隐藏加载状态
                 loadingEl.classList.add('hidden');
             }, 300);
             
@@ -294,7 +320,6 @@
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex === poems.length - 1;
             
-            // 移动设备上禁用状态的视觉反馈增强
             if (prevBtn.disabled) {
                 prevBtn.classList.add('opacity-30');
             } else {
@@ -310,7 +335,6 @@
 
         // 播放/暂停朗读
         function togglePlay() {
-            // 移动设备上确保提示隐藏
             mobileHint.classList.add('hidden');
             
             if (isPlaying) {
@@ -320,52 +344,84 @@
             }
         }
 
-        // 开始朗读
+        // 开始朗读（兼容Safari和华为浏览器）
         function startPlay() {
             // 停止任何正在进行的朗读
             stopPlay();
             
+            // 检查浏览器是否支持语音合成
+            if (!('speechSynthesis' in window)) {
+                alert('您的浏览器不支持语音朗读功能，请更换浏览器（如Chrome）重试');
+                return;
+            }
+            
             const poem = poems[currentIndex];
-            // 创建朗读内容（标题 + 朝代 + 作者 + 内容）
             const textToRead = `${poem.title}，${poem.dynasty}${poem.author}。${poem.content.replace(/\n/g, '。')}`;
             
-            // 创建语音合成实例
+            // 获取可用语音并选择中文语音
+            let voices = speechSynthesis.getVoices();
+            let chineseVoice = null;
+            
+            // 遍历语音列表查找中文语音
+            for (let i = 0; i < voices.length; i++) {
+                const voice = voices[i];
+                if (voice.lang.includes('zh-CN') || voice.name.includes('中文') || voice.name.includes('Chinese')) {
+                    chineseVoice = voice;
+                    break;
+                }
+            }
+            
+            // 创建语音实例
             utterance = new SpeechSynthesisUtterance(textToRead);
-            // 设置中文朗读
+            
+            // 设置中文语音（如找到）
+            if (chineseVoice) {
+                utterance.voice = chineseVoice;
+            } else {
+                alert('未检测到中文语音包，将使用默认语音朗读');
+            }
+            
+            // 基础配置
             utterance.lang = 'zh-CN';
-            
-            // 根据设备类型调整语速
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            utterance.rate = isMobile ? 0.8 : 0.9; // 移动设备语速稍慢
-            
-            // 设置语调
+            utterance.rate = isMobile ? 0.8 : 0.9;
             utterance.pitch = 1.1;
-            // 设置音量
             utterance.volume = 1;
             
-            // 朗读结束时回调
+            // 朗读结束回调
             utterance.onend = function() {
                 isPlaying = false;
                 playBtn.innerHTML = '<i class="fa fa-play text-2xl md:text-3xl"></i>';
             };
             
-            // 处理语音合成可能的错误
+            // 错误处理
             utterance.onerror = function(event) {
                 console.error('语音合成错误:', event.error);
-                alert('朗读功能暂时无法使用，请稍后再试');
+                let errorMsg = '语音朗读失败，请重试';
+                
+                if (event.error === 'not-allowed') {
+                    errorMsg = '语音朗读权限被拒绝，请在浏览器设置中开启权限';
+                } else if (event.error === 'audio-capture') {
+                    errorMsg = '无法访问音频设备，请检查浏览器权限';
+                }
+                
+                alert(errorMsg);
                 isPlaying = false;
                 playBtn.innerHTML = '<i class="fa fa-play text-2xl md:text-3xl"></i>';
             };
             
-            // 开始朗读
-            speechSynthesis.speak(utterance);
+            // Safari需要延迟触发
+            setTimeout(() => {
+                speechSynthesis.speak(utterance);
+            }, 100);
+            
             isPlaying = true;
             playBtn.innerHTML = '<i class="fa fa-pause text-2xl md:text-3xl"></i>';
         }
 
         // 停止朗读
         function stopPlay() {
-            if (isPlaying && utterance) {
+            if (isPlaying && utterance && speechSynthesis) {
                 speechSynthesis.cancel();
                 isPlaying = false;
                 playBtn.innerHTML = '<i class="fa fa-play text-2xl md:text-3xl"></i>';
@@ -374,9 +430,6 @@
 
         // 键盘控制
         function handleKeyPress(e) {
-            // 移动设备上隐藏提示
-            mobileHint.classList.add('hidden');
-            
             switch(e.key) {
                 case 'ArrowLeft':
                     goToPrev();
