@@ -189,7 +189,8 @@
                 <div class="counter-container absolute bottom-6 left-1/2 transform -translate-x-1/2 text-primary/50 flex flex-col items-center gap-1 px-2">
                     <div class="flex items-center gap-1">
                         <i class="fa fa-eye"></i>
-                        <span>访问次数: <span id="visit-counter">0</span></span>
+                        //<span>总访问次数: <span id="visit-counter">0</span></span>
+                        <span>总访问次数: <span class="webviso" data-type="total">0</span></span>
                     </div>
                     <div class="powered-by font-medium">POWERED BY PYB</div>
                 </div>
@@ -1224,6 +1225,8 @@
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', init);
     </script>
+    <!-- 引入 Webviso 统计脚本（放在 </body> 前） -->
+    <script async src="//webviso.yestool.org/js/index.min.js"></script>
 </body>
 </html>
     
