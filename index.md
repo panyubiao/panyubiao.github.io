@@ -25,9 +25,9 @@
 
 ### 1）学术论文
 <div style="text-align: justify;">
-[25] <strong>Yubiao Pan</strong>, Ailin Tian, Huizhen Zhang, "PROAD: Boosting Caffe Training via Improving LevelDB I/O Performance with Parallel Read, Out-of-Order Optimization, and Adaptive Design", accepted by Parallel Computing, 2025. <strong>(CCF B类期刊)</strong> 
+[25] <strong>Yubiao Pan*</strong>, Ailin Tian, Huizhen Zhang, "PROAD: Boosting Caffe Training via Improving LevelDB I/O Performance with Parallel Read, Out-of-Order Optimization, and Adaptive Design", accepted by Parallel Computing, 2025. <strong>(CCF B类期刊)</strong> 
 <br><br>
-[24] Yixiang Cai, <strong>Yubiao Pan</strong>, Xinwei Lin, Jie Xu, Huizhen Zhang, Mingwei Lin, "SoKV: Scan Performance Optimization for KV Separation with Adaptive Dynamic Grouping and GC-based LSM-tree Management", accepted by Future Generation Computer Systems (FGCS), 2025. <strong>(CCF C类期刊)</strong> 
+[24] Yixiang Cai, <strong>Yubiao Pan*</strong>, Xinwei Lin, Jie Xu, Huizhen Zhang, Mingwei Lin, "SoKV: Scan Performance Optimization for KV Separation with Adaptive Dynamic Grouping and GC-based LSM-tree Management", accepted by Future Generation Computer Systems (FGCS), 2025. <strong>(CCF C类期刊)</strong> 
 <br><br>
 [23] Qingyang Zhang, Yongkun Li, <strong>Yubiao Pan</strong>, Haoting Tang, Yinlong Xu, "Mitigating Resource Usage Dependency in Sorting-based KV Stores on Hybrid Storage Devices via Operation Decoupling", Proceedings of the 2025 USENIX Annual Technical Conference (<strong>USENIX ATC</strong>), July 7-9, Boston, MA, USA, 2025. <strong>(CCF A类会议)</strong> 
 <br><br>
