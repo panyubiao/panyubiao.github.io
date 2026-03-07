@@ -47,7 +47,7 @@
 <br><br>
 [15] Yuhan Luo, Mingwei Lin, <strong>Yubiao Pan</strong>, Zeshui Xu, "Dual Locality-Based Flash Translation Layer for NAND Flash-Based Consumer Electronics", IEEE Transactions on Consumer Electronics (TCE), vol.68, no.3, pp.141-148, 2022. <strong>(Honored with third place in the Chester W. Sall Memorial Awards 2014)</strong>
 <br><br>
-[14] <strong>Yubiao Pan*</strong>, Mingwei Lin, Zhixiong Wu, Huizhen Zhang, Zeshui Xu, "Caching-aware Garbage Collection to Improve Performance and Lifetime for NAND Flash SSDs", IEEE Transactions on Consumer Electronics (TCE), vol.67, no.2, pp.281-290, 2021.
+[14] <strong>Yubiao Pan</strong>, Mingwei Lin, Zhixiong Wu, Huizhen Zhang, Zeshui Xu, "Caching-aware Garbage Collection to Improve Performance and Lifetime for NAND Flash SSDs", IEEE Transactions on Consumer Electronics (TCE), vol.67, no.2, pp.281-290, 2021.
 <br><br>
 [13] <strong>Yubiao Pan*</strong>, Mingwei Lin, "ACS: an Alternate Coding Scheme to Improve Degrade Read Performance for SSD-based RAID5 Systems", Int. J. High Performance Systems Architecture, vol. 10, no. 2, pp.70-79, 2021.
 <br><br>
