@@ -20,12 +20,15 @@
 ## 科研信息
 ### <span style="color: red; background-color: yellow;">News!</span>
 <div style="text-align: justify;">
+  恭喜蔡逸翔的论文"VGKV: Variable Granularity Garbage Collection with SSTable Management for KV Separation"被CCF C类期刊Future Generation Computer Systems录用！祝贺逸翔！<br>
   恭喜田爱玲的论文"PROAD: Boosting Caffe Training via Improving LevelDB I/O Performance with Parallel Read, Out-of-Order Optimization, and Adaptive Design"被CCF B类期刊Parallel Computing录用！祝贺爱玲！
 </div>
 
 ### 1）学术论文
 <div style="text-align: justify;">
-[25] <strong>Yubiao Pan*</strong>, Ailin Tian, Huizhen Zhang, "PROAD: Boosting Caffe Training via Improving LevelDB I/O Performance with Parallel Read, Out-of-Order Optimization, and Adaptive Design", Parallel Computing, 127(103181):1-10, 2025. <strong>(CCF B类期刊)</strong> 
+[26] Yixiang Cai, <strong>Yubiao Pan*</strong>, Huizhen Zhang, "VGKV: Variable Granularity Garbage Collection with SSTable Management for KV Separation", accepted by Future Generation Computer Systems (FGCS), 2026. <strong>(CCF C类期刊)</strong> 
+<br><br>
+[25] <strong>Yubiao Pan*</strong>, Ailin Tian, Huizhen Zhang, "PROAD: Boosting Caffe Training via Improving LevelDB I/O Performance with Parallel Read, Out-of-Order Optimization, and Adaptive Design", Parallel Computing, 127(103181):1-10, 2026. <strong>(CCF B类期刊)</strong> 
 <br><br>
 [24] Yixiang Cai, <strong>Yubiao Pan*</strong>, Xinwei Lin, Jie Xu, Huizhen Zhang, Mingwei Lin, "SoKV: Scan Performance Optimization for KV Separation with Adaptive Dynamic Grouping and GC-based LSM-tree Management", Future Generation Computer Systems (FGCS), 175(108083):1-12, 2026. <strong>(CCF C类期刊)</strong> 
 <br><br>
