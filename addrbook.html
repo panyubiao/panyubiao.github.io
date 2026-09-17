@@ -102,6 +102,14 @@
   .meta .v{color:#43505e;flex:1;word-break:break-word}
   .meta .v.muted{color:#b6bec8}
 
+  /* 老师科目徽章 */
+  .subject-badge{
+    display:inline-block;font-size:12px;font-weight:600;
+    color:#b07d3f;background:var(--teacher-soft);
+    border:1px solid #f0e2cc;border-radius:6px;
+    padding:2px 9px;letter-spacing:.5px;
+  }
+
   .card.pending{background:#fafbfc;border-style:dashed}
   .card.pending .name{color:#8b95a3;font-weight:500}
 
@@ -130,6 +138,7 @@
     .section-title{margin:16px 0 9px}
     .phone{color:#1f2933}
     .card.teacher .phone{color:#1f2933}
+    .subject-badge{background:#f5f5f5;border-color:#e0e0e0;color:#333}
   }
   @media (max-width:600px){
     body{padding:14px 12px 40px}
@@ -152,7 +161,7 @@
   </header>
 
   <div class="toolbar no-print">
-    <input id="search" type="search" placeholder="🔍 搜索姓名 / 城市 / 单位 / 职务">
+    <input id="search" type="search" placeholder="🔍 搜索姓名 / 科目 / 城市 / 单位 / 职务">
     <div class="chips" id="chips"></div>
   </div>
 
@@ -177,17 +186,17 @@
 (function(){
   'use strict';
 
-  /* ========== ① 老师数据：{ name: 姓名, phone: 电话 } ========== */
+  /* ========== ① 老师数据（已填写科目） ========== */
   const teachers = [
-    { name:'张志红老师', phone:'13859512386' },
-    { name:'苏冠蓉老师', phone:'13859512201' },
-    { name:'陈笑梅老师', phone:'13859512531' },
-    { name:'张力老师',   phone:'13859512858' },
-    { name:'郭恺岚老师', phone:'13859512215' },
-    { name:'傅维平老师', phone:'13859512580' },
-    { name:'陈志勇老师', phone:'13859512535' },
-    { name:'杜晓玲老师', phone:'13959033586' },
-    { name:'廖建生老师', phone:'13859512339' }
+    { name:'张志红老师', phone:'13859512386', subject:'语文' },
+    { name:'苏冠蓉老师', phone:'13859512201', subject:'数学' },
+    { name:'陈笑梅老师', phone:'13859512531', subject:'英语' },
+    { name:'张力老师',   phone:'13859512858', subject:'物理' },
+    { name:'郭恺岚老师', phone:'',            subject:'物理' },
+    { name:'傅维平老师', phone:'13859512580', subject:'化学' },
+    { name:'陈志勇老师', phone:'13859512535', subject:'生物' },
+    { name:'杜晓玲老师', phone:'13959033586', subject:'政治' },
+    { name:'廖建生老师', phone:'13859512339', subject:'体育' }
   ];
 
   /* ========== ② 同学数据：[序号,姓名,电话,城市,单位,职务] ========== */
@@ -285,9 +294,15 @@
     const phone = t.phone
       ? `<a class="phone" href="tel:${esc(t.phone)}">${fmtPhone(t.phone)}</a>`
       : `<span class="phone none">电话待补充</span>`;
+
+    const subject = t.subject
+      ? `<div class="meta"><div class="row"><span class="k">科目</span><span class="v"><span class="subject-badge">${esc(t.subject)}</span></span></div></div>`
+      : `<div class="meta"><div class="row"><span class="v muted">科目待补充</span></div></div>`;
+
     return `<article class="card teacher">
       <div class="card-head"><h3 class="name">${esc(t.name)}</h3></div>
       ${phone}
+      ${subject}
     </article>`;
   }
 
@@ -330,9 +345,11 @@
   function render(){
     const q = state.q.trim().toLowerCase();
 
-    /* 老师 */
+    /* 老师（姓名 / 电话 / 科目 均可搜） */
     const tList = teachers.filter(t =>
-      !q || t.name.toLowerCase().includes(q) || String(t.phone||'').includes(q)
+      !q || t.name.toLowerCase().includes(q) ||
+      String(t.phone||'').includes(q) ||
+      String(t.subject||'').toLowerCase().includes(q)
     );
     $tGrid.innerHTML = tList.map(teacherCard).join('');
 
