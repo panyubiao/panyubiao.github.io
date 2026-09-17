@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>龙岩二中高2006届8班 · 同学通讯录</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#1f2933; --sub:#6b7684; --line:#e6eaf0;
+    --accent:#2f6fa8; --accent-soft:#eef4fa;
+    --teacher:#b07d3f; --teacher-soft:#fbf4e9;
+  }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:#eef1f5; color:var(--ink);
+    padding:28px 20px 60px; -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:1080px;margin:0 auto}
+
+  /* ===== 头部 ===== */
+  .hero{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:16px;
+    padding:26px 30px;border-radius:16px;
+    background:linear-gradient(135deg,#2f6fa8,#4a90cc);
+    color:#fff;margin-bottom:18px;
+    box-shadow:0 8px 24px rgba(47,111,168,.25);
+  }
+  .hero h1{font-size:24px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{font-size:13px;opacity:.88;margin-top:8px;letter-spacing:.3px}
+  .btn{
+    background:rgba(255,255,255,.16);color:#fff;
+    border:1px solid rgba(255,255,255,.45);
+    padding:9px 16px;border-radius:9px;font-size:13px;
+    cursor:pointer;white-space:nowrap;font-family:inherit;transition:.2s;
+  }
+  .btn:hover{background:rgba(255,255,255,.3)}
+
+  /* ===== 工具栏 ===== */
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:6px}
+  #search{
+    flex:1;min-width:210px;padding:11px 16px;border-radius:10px;
+    border:1px solid var(--line);background:#fff;font-size:14px;
+    font-family:inherit;color:var(--ink);outline:none;
+    box-shadow:0 1px 3px rgba(31,41,51,.05);transition:.2s;
+  }
+  #search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,111,168,.13)}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{
+    padding:9px 14px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;font-size:13px;color:var(--sub);cursor:pointer;
+    transition:.18s;font-family:inherit;white-space:nowrap;
+  }
+  .chip:hover{border-color:#c3d2e0}
+  .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  /* ===== 区块标题 ===== */
+  .section-title{
+    font-size:15px;font-weight:600;margin:26px 0 14px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .section-title::before{
+    content:'';width:4px;height:16px;border-radius:2px;background:var(--accent);
+  }
+  .section-title.teacher-title::before{background:var(--teacher)}
+  .count{font-size:12.5px;font-weight:400;color:#9aa5b1}
+
+  /* ===== 卡片网格 ===== */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:13px;
+    padding:16px 17px 15px;box-shadow:0 1px 3px rgba(31,41,51,.05);
+    transition:transform .18s,box-shadow .18s;break-inside:avoid;
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(31,41,51,.1)}
+
+  .card-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .no{
+    font-size:11px;color:#9aa5b1;background:#f3f6f9;border-radius:5px;
+    padding:2px 6px;flex-shrink:0;line-height:1.5;
+    font-variant-numeric:tabular-nums;
+  }
+  .name{font-size:16px;font-weight:600;letter-spacing:.3px;line-height:1.3}
+
+  .phone{
+    display:inline-block;font-size:14.5px;font-weight:600;
+    color:var(--accent);text-decoration:none;letter-spacing:.5px;
+    font-variant-numeric:tabular-nums;margin-bottom:2px;
+  }
+  .phone:hover{text-decoration:underline}
+  .phone.none{color:#b6bec8;font-weight:400;font-size:13px;letter-spacing:0}
+  .card.teacher .phone{color:var(--teacher)}
+  .card.teacher .no{background:var(--teacher-soft);color:#b07d3f}
+
+  .meta{
+    display:flex;flex-direction:column;gap:6px;
+    border-top:1px dashed #edf1f5;padding-top:11px;margin-top:11px;
+  }
+  .meta .row{display:flex;gap:8px;font-size:12.5px;line-height:1.55}
+  .meta .k{color:#9aa5b1;flex-shrink:0;width:30px}
+  .meta .v{color:#43505e;flex:1;word-break:break-word}
+  .meta .v.muted{color:#b6bec8}
+
+  .card.pending{background:#fafbfc;border-style:dashed}
+  .card.pending .name{color:#8b95a3;font-weight:500}
+
+  .empty{text-align:center;color:#9aa5b1;font-size:13.5px;padding:34px 0}
+
+  .foot{
+    margin-top:40px;text-align:center;font-size:12px;color:#9aa5b1;
+    line-height:1.8;letter-spacing:.3px;
+  }
+
+  /* ===== 打印 ===== */
+  @page{size:A4;margin:12mm}
+  @media print{
+    body{background:#fff;padding:0;font-size:12px}
+    .page{max-width:none}
+    .no-print{display:none!important}
+    .hero{
+      background:#fff;color:var(--ink);box-shadow:none;border-radius:0;
+      border-bottom:2px solid var(--accent);padding:0 0 14px;margin-bottom:6px;
+    }
+    .hero h1{color:var(--ink)}
+    .hero .sub{color:var(--sub)}
+    .grid{grid-template-columns:repeat(3,1fr);gap:8px}
+    .card{box-shadow:none;border:1px solid #dde3ea;padding:11px 12px;border-radius:9px}
+    .card:hover{transform:none;box-shadow:none}
+    .section-title{margin:16px 0 9px}
+    .phone{color:#1f2933}
+    .card.teacher .phone{color:#1f2933}
+  }
+  @media (max-width:600px){
+    body{padding:14px 12px 40px}
+    .hero{flex-direction:column;align-items:flex-start;padding:20px}
+    .hero h1{font-size:19px}
+    .grid{grid-template-columns:1fr;gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <div>
+      <h1>龙岩二中高2006届8班</h1>
+      <p class="sub">同学通讯录 · <span id="stat"></span></p>
+    </div>
+    <button class="btn no-print" onclick="window.print()">🖨 打印 / 保存为 PDF</button>
+  </header>
+
+  <div class="toolbar no-print">
+    <input id="search" type="search" placeholder="🔍 搜索姓名 / 城市 / 单位 / 职务">
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <section>
+    <h2 class="section-title teacher-title">老师</h2>
+    <div class="grid" id="teacherGrid"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">同学 <span class="count" id="stuCount"></span></h2>
+    <div class="grid" id="stuGrid"></div>
+    <p class="empty" id="emptyTip" hidden>没有找到匹配的记录</p>
+  </section>
+
+  <footer class="foot">
+    仅限班级内部使用，请勿外传 · 信息如有变更，请联系班委更新
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ========== ① 老师数据：{ name: 姓名, phone: 电话 } ========== */
+  const teachers = [
+    { name:'张志红老师', phone:'13859512386' },
+    { name:'苏冠蓉老师', phone:'13859512201' },
+    { name:'陈笑梅老师', phone:'13859512531' },
+    { name:'张力老师',   phone:'13859512858' },
+    { name:'郭恺岚老师', phone:'' },
+    { name:'傅维平老师', phone:'13859512580' },
+    { name:'陈志勇老师', phone:'13859512535' },
+    { name:'杜晓玲老师', phone:'13959033586' },
+    { name:'廖建生老师', phone:'13859512339' }
+  ];
+
+  /* ========== ② 同学数据：[序号,姓名,电话,城市,单位,职务] ========== */
+  const raw = [
+    [1,'温清泉','13860291859','福建省龙岩市','龙岩体育运动学校','教师'],
+    [2,'苏桓','18505978355','福建省福州市','福建星云电子股份有限公司','产品经理'],
+    [3,'蒋文健','15959214245','福建省龙岩市','福建紫金工程技术有限公司',''],
+    [4,'张健雄','15206088521','福建省龙岩市','上杭县贺达工贸有限公司','管理'],
+    [5,'叶根强','13799305870','福建省龙岩市','龙岩城发集团','投资'],
+    [6,'章涌','18760071898','福建省龙岩市','龙岩市蓝天环保科技有限公司','报告编制员'],
+    [7,'杨志雄','18750250505','福建省厦门市','厦门建霖集团','磁感线切割外贸业务员'],
+    [8,'游凡杰','18650029360','福建省厦门市','厦门建发建设运营管理有限公司','工程管理'],
+    [9,'吴俊楠','15880399388','福建省龙岩市','福建省闽西监狱','心灵工程师'],
+    [10,'陈宇','15280815926','福建省龙岩市','福建龙津融媒文化传播有限公司','总经理'],
+    [11,'徐澍','18105971133','福建省龙岩市','西南证券','总助'],
+    [12,'潘玉彪','15955155098','福建省厦门市','华侨大学','软件工程系系主任'],
+    [13,'郑遥力','15159000663','福建省龙岩市','福建天衡联合(龙岩)律师事务所','律师'],
+    [14,'黄龙','13459221159','福建省厦门市','厦门理研工业有限公司','切割磁感线保洁'],
+    [15,'陈锐','15080329960','福建省龙岩市','福建德熙酒业有限公司','酿酒师'],
+    [16,'陈思宇','15059901132','福建省龙岩市','智航科技','业务员'],
+    [17,'赖思哲','15860756460','福建省厦门市','中环联合认证中心','工程师'],
+    [18,'廖涌奇','15080275801','福建省龙岩市','厦门大学附属龙岩中医院','外三科主任'],
+    [19,'李龙浩','15980202919','福建省龙岩市','艺朵文化',''],
+    [20,'庄晓明','13959069222','福建省龙岩市','福建万腾车桥有限公司','副总'],
+    [21,'连帆','18961181322','江苏省苏州市','安徽皓元药业有限公司','高级总监'],
+    [22,'汤键南','18650131486','福建省厦门市','联想','工程师'],
+    [23,'林新平','13859555130','福建省龙岩市','自己创业','全职做牛做马'],
+    [24,'罗福强','18060190063','福建省龙岩市','福建友佳机械有限公司','职员'],
+    [25,'谢澄钻','13859900261','福建省厦门市','厦门市自然资源和规划局','森林经理工程师'],
+    [26,'林炼炼','15980862434','福建省厦门市','厦门艾拓自动化','高级工程师兼项目部经理'],
+    [27,'许文滉','15980211672','福建省福州市','福建山里香惠营农业有限公司',''],
+    [28,'吴繁文','15221980668','上海市上海市','华东建筑设计研究院','建筑师'],
+    [29,'刘奕明','18039807119','福建省龙岩市','龙岩市第一医院',''],
+    [30,'翁磊华','18359265386','福建省厦门市','厦门大学附属中山医院',''],
+    [31,'苏红','13950785310','福建省莆田市','福建新亿发集团','自主品牌销售经理'],
+    [32,'郑芬','13605915251','福建省龙岩市','龙岩云诺信财务咨询集团有限公司',''],
+    [33,'廖璐','15985827641','福建省厦门市','火炬城建','部门经理'],
+    [34,'戴春琦','13860200920','福建省龙岩市','汇金创投','投资部经理'],
+    [35,'林振洪','13685952591','福建省龙岩市','金叶复烤有限责任公司','化学检验负责人'],
+    [36,'谢丽冰','13599505759','福建省厦门市','科华数据股份有限公司','招聘经理'],
+    [37,'谢姝','13055973785','福建省龙岩市','紫金龙净环保新能源股份有限公司',''],
+    [38,'戴晶晶','13559980015','福建省龙岩市','国网龙岩供电公司',''],
+    [39,'吴惠珍','18650860881','福建省龙岩市','龙岩集科商务信息咨询有限公司',''],
+    [40,'杨静','18205969193','福建省厦门市','时代电服科技有限公司','测试工程师'],
+    [41,'杜凯泳','18859002708','福建省龙岩市','龙岩市融媒体中心',''],
+    [42,'陈雁聪','15080285291','福建省厦门市','美亚柏科信息安全研究所有限公司','工程师'],
+    [43,'郑芳','13062438613','福建省龙岩市','龙净环保','员工'],
+    [44,'苏哲','18039872989','福建省龙岩市','闽西职业技术学院','档案管理员'],
+    [45,'郑佳平','15959702323','福建省龙岩市','中国平安人寿保险','销售'],
+    [46,'叶莹','15671565606','湖北省武汉市','武汉名杰模塑有限公司','工程师'],
+    [47,'黄蕾','18659752626','福建省龙岩市','居家','家庭管理'],
+    [48,'翁夏凌','15990649040','浙江省台州市','浙江鑫湖律师事务所','律师'],
+    [49,'林晶','15980011013','福建省厦门市','厦门祥格格商贸有限公司','总监'],
+    [50,'邱美美','13959012700','福建省龙岩市','新罗区西城街道办事处','副职'],
+    [51,'钟梦洁','13600999797','福建省龙岩市','中晶科技','研发部经理'],
+    [52,'邱彬莲','13859594481','福建省龙岩市','新罗区住房和城乡建设局','干部'],
+    [53,'曹芳卉','13656034943','福建省厦门市','联想','职员'],
+    [54,'林榕','15259290934','福建省厦门市','厦门银行','营销部经理'],
+    [55,'涂爱珍','15806030393','福建省福州市','瑞芯微电子股份有限公司','工程师'],
+    [56,'林菁菁','13860451250','福建省厦门市','厦门市植保植检站',''],
+    [57,'柯明','15960887733','福建省龙岩市','龙岩市欣荣税务师事务所',''],
+    [58,'张康康','','','',''],
+    [59,'连毅嵘','','','',''],
+    [60,'范翰卿','','','',''],
+    [61,'陈伟杰','','','',''],
+    [62,'陈珑龙','','','',''],
+    [63,'陈志超','','','',''],
+    [64,'廖玉梅','','','','']
+  ];
+
+  const students = raw.map(r => ({
+    no:r[0], name:r[1], phone:r[2], city:r[3], company:r[4], title:r[5]
+  }));
+
+  /* ========== 工具函数 ========== */
+  const esc = s => String(s == null ? '' : s)
+    .replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  const PROVINCES = ['福建','江苏','浙江','湖北','上海','北京','广东','江西','山东','四川','安徽','湖南'];
+  function shortCity(c){
+    if(!c) return '';
+    let s = c.replace(/省|市/g,'');
+    for(const p of PROVINCES){ if(s.startsWith(p)){ s = s.slice(p.length); break; } }
+    return s || c.replace(/省|市/g,'');
+  }
+
+  function fmtPhone(p){
+    if(!p) return '';
+    const d = String(p).replace(/\D/g,'');
+    return d.length === 11 ? d.slice(0,3) + ' ' + d.slice(3,7) + ' ' + d.slice(7) : p;
+  }
+
+  /* ========== 卡片生成 ========== */
+  function teacherCard(t){
+    const phone = t.phone
+      ? `<a class="phone" href="tel:${esc(t.phone)}">${fmtPhone(t.phone)}</a>`
+      : `<span class="phone none">电话待补充</span>`;
+    return `<article class="card teacher">
+      <div class="card-head"><h3 class="name">${esc(t.name)}</h3></div>
+      ${phone}
+    </article>`;
+  }
+
+  function studentCard(s){
+    const pending = !s.phone && !s.city && !s.company;
+    const no = String(s.no).padStart(2,'0');
+    const phone = s.phone
+      ? `<a class="phone" href="tel:${esc(s.phone)}">${fmtPhone(s.phone)}</a>`
+      : `<span class="phone none">电话待补充</span>`;
+
+    const rows = [];
+    if(s.city)    rows.push(['城市', shortCity(s.city)]);
+    if(s.company) rows.push(['单位', s.company]);
+    if(s.title && !['无','-','—',''].includes(s.title)) rows.push(['职务', s.title]);
+
+    const meta = rows.length
+      ? `<div class="meta">${rows.map(([k,v]) =>
+          `<div class="row"><span class="k">${k}</span><span class="v">${esc(v)}</span></div>`
+        ).join('')}</div>`
+      : `<div class="meta"><div class="row"><span class="v muted">信息待补充</span></div></div>`;
+
+    return `<article class="card${pending ? ' pending' : ''}">
+      <div class="card-head"><span class="no">${no}</span><h3 class="name">${esc(s.name)}</h3></div>
+      ${phone}
+      ${meta}
+    </article>`;
+  }
+
+  /* ========== 状态 & 渲染 ========== */
+  const state = { q:'', city:'全部' };
+
+  const $tGrid   = document.getElementById('teacherGrid');
+  const $sGrid   = document.getElementById('stuGrid');
+  const $count   = document.getElementById('stuCount');
+  const $empty   = document.getElementById('emptyTip');
+  const $chips   = document.getElementById('chips');
+  const $search  = document.getElementById('search');
+  const $stat    = document.getElementById('stat');
+
+  function render(){
+    const q = state.q.trim().toLowerCase();
+
+    /* 老师 */
+    const tList = teachers.filter(t =>
+      !q || t.name.toLowerCase().includes(q) || String(t.phone||'').includes(q)
+    );
+    $tGrid.innerHTML = tList.map(teacherCard).join('');
+
+    /* 同学 */
+    const sList = students.filter(s => {
+      if(state.city !== '全部' && shortCity(s.city) !== state.city) return false;
+      if(!q) return true;
+      return [s.name, s.phone, s.city, s.company, s.title]
+        .join(' ').toLowerCase().includes(q);
+    });
+    $sGrid.innerHTML = sList.map(studentCard).join('');
+    $count.textContent = '· ' + sList.length + ' 人';
+    $empty.hidden = sList.length > 0;
+  }
+
+  function initChips(){
+    const counts = {};
+    students.forEach(s => {
+      const c = shortCity(s.city);
+      if(c) counts[c] = (counts[c] || 0) + 1;
+    });
+    const order = Object.keys(counts).sort((a,b) => counts[b] - counts[a]);
+    const items = [['全部', students.length]].concat(order.map(c => [c, counts[c]]));
+
+    $chips.innerHTML = items.map(([c,n]) =>
+      `<button class="chip${c === '全部' ? ' on' : ''}" data-city="${esc(c)}">${esc(c)} ${n}</button>`
+    ).join('');
+
+    $chips.addEventListener('click', e => {
+      const btn = e.target.closest('.chip');
+      if(!btn) return;
+      state.city = btn.dataset.city;
+      $chips.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === btn));
+      render();
+    });
+  }
+
+  /* ========== 初始化 ========== */
+  const filled = students.filter(s => s.phone).length;
+  $stat.textContent = `共 ${students.length} 位同学 · ${teachers.length} 位老师`;
+  $search.addEventListener('input', e => { state.q = e.target.value; render(); });
+
+  initChips();
+  render();
+})();
+</script>
+</body>
+</html>
