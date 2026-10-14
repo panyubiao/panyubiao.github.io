@@ -25,9 +25,9 @@
 
 ### 1）学术论文
 <div style="text-align: justify;">
-[27] Qingyang Zhang, Yongkun Li, <strong>Yubiao Pan</strong>, Haoting Tang, Yinlong Xu, Zaigui Zhang, "On Optimizing Sorting-based KV Stores on Hybrid Storage Devices by Breaking Resource Usage Dependency with Operation Decoupling and Adaptive Scheduling", ACM Transactions on Storage (<strong>TOS</strong>), 22(3): 1-35, 2026. <strong>(CCF A类期刊)</strong> 
+[27] Qingyang Zhang, Yongkun Li, <strong>Yubiao Pan</strong>, Haoting Tang, Yinlong Xu, Zaigui Zhang, "On Optimizing Sorting-based KV Stores on Hybrid Storage Devices by Breaking Resource Usage Dependency with Operation Decoupling and Adaptive Scheduling", ACM Transactions on Storage (<strong>TOS</strong>), 22(3):1-35, 2026. <strong>(CCF A类期刊)</strong> 
 <br><br>
-[26] Yixiang Cai, <strong>Yubiao Pan*</strong>, Huizhen Zhang, "VGKV: Variable Granularity Garbage Collection with SSTable Management for KV Separation", accepted by Future Generation Computer Systems (<strong>FGCS</strong>), 2026. <strong>(CCF C类期刊)</strong> 
+[26] Yixiang Cai, <strong>Yubiao Pan*</strong>, Huizhen Zhang, "VGKV: Variable Granularity Garbage Collection with SSTable Management for KV Separation", Future Generation Computer Systems (<strong>FGCS</strong>), 183(108525):1-13, 2026. <strong>(CCF C类期刊)</strong> 
 <br><br>
 [25] <strong>Yubiao Pan*</strong>, Ailin Tian, Huizhen Zhang, "PROAD: Boosting Caffe Training via Improving LevelDB I/O Performance with Parallel Read, Out-of-Order Optimization, and Adaptive Design", Parallel Computing, 127(103181):1-10, 2026. <strong>(CCF B类期刊)</strong> 
 <br><br>
